@@ -1,0 +1,36 @@
+/*baggrund farve og typografi */
+body{
+    background-color: #f9f6f0;
+    font-family: "oswald", sans-serif;
+}
+
+nav{
+    background-color: #2b4257;
+    color: #ffffff;
+    display: flex;
+    justify-content: right;
+    padding: 1%;
+    position: sticky;
+    font-weight: normal;
+}
+/* list-styl-type none: gør så navigationen ikke pladseres som en liste*/
+nav ul{
+    list-style-type: none;
+}
+/* li = listen inline er hvordan vi ønsker at fremvise. Her på linie*/
+nav li{
+    display: inline;
+}
+/* for at fjerne link farven og gøre teksten hvid*/
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+/*når man hover over bliver teksten understrejet, og indikere klikbarhed*/
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+     text-decoration: none;
+     color: #ffffff;
+}
