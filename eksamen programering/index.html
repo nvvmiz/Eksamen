@@ -15,23 +15,27 @@
     <!-- dette er vores tekst font-->
     <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-</head>
+    </head>
 <body>
     <!--Logo i navigationsbar. alt er assebility ( handicapvenligt )
     navigations underside knapper-->
-    <img class="logo" src="images/Logo.png.png" alt="logo for Lind old boys">
+<!-- <p class="lob"> Lind Old Boys </p>--> 
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/Logo.png.png" alt="logo for Lind old boys">
+            </a></div>
 
-    <nav>
-       <p class="lob"> Lind Old Boys </p>
-        <ul>
-            <li class="fællesskabet"><a href="fællesskabet.html">Fællesskabet</a></li> 
-            <li class="sport"><a href="Sport.html">Sport</a></li>
-            <li class="kontakt"><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-    </nav>
-    <header>
-        
+        <div class="navigation">
+            <input type="checkbox" class="toggle-menu">
+            <div class="burger"></div>
+
+            <ul class="menu">
+                <li><a href="fællesskabet.html">Fællesskabet</a></li> 
+                <li><a href="Sport.html">Sport</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
     </header>
 
 

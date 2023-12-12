@@ -1,66 +1,183 @@
-@media only screen and (max-width: 600px){
-    .fællesskabet, .sport, .kontakt {display: none;}
-}
-@media only screen and (max-width: 768px){
-    .fællesskabet, .sport, .kontakt {display: none;}
-}
-/*baggrund farve og typografi */
-body{
+body {
     background-color: #f9f6f0;
     font-family: "oswald", sans-serif;
     margin: 0;
-    
+}    
 
 /* background-color ændre farven på baggrund. color ændrer farven på tekst. display definerer elementet, som flex 
 container og hvere child element inden i er et flex element. justify-content placerer teksten til højre. 
 padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav i forhold til sidens toppen*/
-nav{
+.header {
     background-color: #2b4257;
     color: #ffffff;
     display: flex;
-    justify-content: right;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    transition: 0.3s;
+    /*justify-content: right;
     padding: 1%;
     font-weight: normal;
     margin-top: -170px;
     font-size: 24px;
     height: 90px;
-    position: sticky;
+    position: sticky;*/
     }
-
-.fællesskabet, .sport, .kontakt {
-    margin-right: 35px;
+/* margin-left placerer logoet i venstre side af skærmen. position sticky sørger for at logoet følger navigationsbar
+z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til toppen*/
+/*.logo {
+    margin-left: 30px;
+    z-index: 1;
+    position: sticky;
+    top: 10px;*/
+.logo {
+    display: block;
 }
+
+.logo a img {
+    display: block;
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.burger {
+    position: relative;
+    width: 20px;
+    height: 4px;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+}
+.burger:before,
+.burger:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.burger:before {
+    top: -10px;
+    width: 20px;
+
+}
+.burger:after {
+    top: 10px;
+    width: 20px;
+    
+}
+.toggle-menu {
+position: absolute;
+width: 30px;
+height: 100%;
+z-index: 3;
+cursor: pointer;
+opacity: 0;
+}
+.burger, .toggle-menu {
+    display: none;
+}
+.navigation input:checked ~ .burger {
+    background: transparent;
+}
+.navigation input:checked ~ .burger:before {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;    
+}
+.navigation input:checked ~ .burger::after {
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;        
+}
+.navigation input:checked ~ .menu {
+    right: 0;
+    box-shadow: -20px 0 40px ;
+}    
 /* list-styl-type none: gør så navigationen ikke pladseres som en liste*/
-nav ul{
+.menu ul{
     list-style-type: none;
 }
 /* li = listen inline er hvordan vi ønsker at fremvise. Her på linie*/
-nav li{
+.menu li{
     display: inline;
+}
+
+menu li a {
+    color:#ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 40px 25px;
+    font-size: 24px;
+    line-height: 1;
+    transition: 0.3s;
 }
 /* for at fjerne link farven og gøre teksten hvid*/
 a:link {
     color: #ffffff;
     text-decoration: none;
 }
-/*når man hover over bliver teksten understrejet, og indikere klikbarhed*/
+/*når man hover over bliver teksten understrejet, og indikere klikbarhed
 a:hover{
-    text-decoration: underline;
-}
+    text-decoration: underline;*/
 a:visited{
      text-decoration: none;
      color: #ffffff;
+
 }
 
-/* margin-left placerer logoet i venstre side af skærmen. position sticky sørger for at logoet følger navigationsbar
-z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til toppen*/
-.logo {
-    margin-left: 30px;
-    z-index: 1;
-    position: sticky;
-    top: 10px;
+@media (max-width: 700px) {
 }
+.burger, .toggle-menu {
+    display: block;   
 
+}
+.header {
+    padding: 10px 20px;
+
+}
+.menu {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    background-color: #2b4257;
+    width: 300px;
+    height: 100%;
+    padding-top: 65px;
+}
+.menu li {
+    width: 100%;   
+}
+.menu li a{
+    padding: 30px;
+    font-size: 24px;
+}
+.menu li a:hover {
+text-decoration: underline;
+}
 .lob {
     margin-right: 740px;
     font-size: 30px;
@@ -70,8 +187,8 @@ footer {
     background-color: #2b4257;
     color: #ffffff;
     padding: 10px;
-    margin-top: 800px;  
     display: flex;
+    margin-top: 1444px;
     justify-content: space-between;
     text-align: left;
 
