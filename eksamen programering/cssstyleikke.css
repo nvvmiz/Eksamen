@@ -1,0 +1,144 @@
+body {
+    background-color: #f9f6f0;
+    font-family: "oswald", sans-serif;
+    margin: 0;
+}    
+
+/* background-color ændre farven på baggrund. color ændrer farven på tekst. display definerer elementet, som flex 
+container og hvere child element inden i er et flex element. justify-content placerer teksten til højre. 
+padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav i forhold til sidens toppen*/
+.header {
+    background-color: #2b4257;
+    color: #ffffff;
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    transition: 0.3s;
+    /*justify-content: right;
+    padding: 1%;
+    font-weight: normal;
+    margin-top: -170px;
+    font-size: 24px;
+    height: 90px;
+    position: sticky;*/
+    }
+/* margin-left placerer logoet i venstre side af skærmen. position sticky sørger for at logoet følger navigationsbar
+z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til toppen*/
+/*.logo {
+    margin-left: 30px;
+    z-index: 1;
+    position: sticky;
+    top: 10px;*/
+.logo {
+    display: block;
+}
+
+.logo a img {
+    display: block;
+    width: 100%;
+
+}    
+/* list-styl-type none: gør så navigationen ikke pladseres som en liste*/
+.menu ul{
+    list-style-type: none;
+}
+/* li = listen inline er hvordan vi ønsker at fremvise. Her på linie*/
+.menu li{
+    display: inline;
+}
+
+/* for at fjerne link farven og gøre teksten hvid*/
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+/*når man hover over bliver teksten understrejet, og indikere klikbarhed
+a:hover{
+    text-decoration: underline;*/
+a:visited{
+     text-decoration: none;
+     color: #ffffff;
+
+}
+
+a:hover {
+text-decoration: underline;
+}
+.lob {
+    margin-right: 740px;
+    font-size: 30px;
+ 
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+.gallery {
+width: 50%;
+display: flex;
+}
+
+footer {
+    background-color: #2b4257;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    margin-top: 1444px;
+    justify-content: space-between;
+    text-align: left;
+
+}
+
+footer ul {
+    list-style-type: none; 
+}

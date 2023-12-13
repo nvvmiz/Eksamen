@@ -1,200 +1,251 @@
 body {
     background-color: #f9f6f0;
-    font-family: "oswald", sans-serif;
     margin: 0;
+    font-family: "oswald", sans-serif;
 }    
 
 /* background-color ændre farven på baggrund. color ændrer farven på tekst. display definerer elementet, som flex 
 container og hvere child element inden i er et flex element. justify-content placerer teksten til højre. 
 padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav i forhold til sidens toppen*/
-.header {
+
+.tekst, .h1, .h2, .h3 {
+    color: #494848;
+
+}
+
+/*.lob {
     background-color: #2b4257;
+    display: block;
     color: #ffffff;
-    display: flex;
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    transition: 0.3s;
-    /*justify-content: right;
-    padding: 1%;
-    font-weight: normal;
-    margin-top: -170px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
     font-size: 24px;
-    height: 90px;
-    position: sticky;*/
-    }
+    z-index: 5;  
+{*/ 
+
+.navigation {
+    background-color: #2b4257;
+    overflow: hidden;
+    color: #ffffff;
+
+} 
+.navigation a {
+    float: right;
+    display: block;
+    color: #ffffff;
+    padding: 20px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    justify-content: center;
+    font-weight: normal;
+    position: sticky;
+}    
+.navigation a:hover {
+    text-decoration: underline;
+
+}
+.navigation a:link, .navigation a:visited {
+    color: #ffffff;
+    text-decoration: none;    
+}
+.navigation a.icon {
+    display: contents;
+}
+
+a.hover {
+    text-decoration: underline;
+}
+a:link, a:visited {
+    color: #ffffff;
+    text-decoration: none;   
+}
+@media only screen and (min-width: 701px) {
+.fa.fa-bars, .icon {display: none;}
+}
+
 /* margin-left placerer logoet i venstre side af skærmen. position sticky sørger for at logoet følger navigationsbar
 z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til toppen*/
-/*.logo {
+.logo {
     margin-left: 30px;
     z-index: 1;
     position: sticky;
-    top: 10px;*/
-.logo {
-    display: block;
-}
-
-.logo a img {
-    display: block;
-    width: 100%;
-}
-
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-
-}
-.menu {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    z-index: 1;
-    transition: 0.5s;
-}
-
-.burger {
-    position: relative;
-    width: 20px;
-    height: 4px;
-    background: #fff;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 2;
-    transition: 0.3s;
-}
-.burger:before,
-.burger:after {
-    content: "";
-    position: absolute;
-    height: 4px;
-    right: 0;
-    background: #fff;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-.burger:before {
-    top: -10px;
-    width: 20px;
-
-}
-.burger:after {
     top: 10px;
-    width: 20px;
-    
-}
-.toggle-menu {
-position: absolute;
-width: 30px;
-height: 100%;
-z-index: 3;
-cursor: pointer;
-opacity: 0;
-}
-.burger, .toggle-menu {
-    display: none;
-}
-.navigation input:checked ~ .burger {
-    background: transparent;
-}
-.navigation input:checked ~ .burger:before {
-    top: 0;
-    transform: rotate(-45deg);
-    width: 30px;    
-}
-.navigation input:checked ~ .burger::after {
-    top: 0;
-    transform: rotate(45deg);
-    width: 30px;        
-}
-.navigation input:checked ~ .menu {
-    right: 0;
-    box-shadow: -20px 0 40px ;
-}    
-/* list-styl-type none: gør så navigationen ikke pladseres som en liste*/
-.menu ul{
-    list-style-type: none;
-}
-/* li = listen inline er hvordan vi ønsker at fremvise. Her på linie*/
-.menu li{
-    display: inline;
-}
-
-menu li a {
-    color:#ffffff;
-    text-decoration: none;
     display: block;
-    padding: 40px 25px;
-    font-size: 24px;
-    line-height: 1;
-    transition: 0.3s;
+}        
+    .logo a img {
+        display: flex;
+    }
+    
+.mySlides {
+    margin-top: 50px;
+    margin-left: 2.8%;
+    margin-right: 1.5%;
 }
-/* for at fjerne link farven og gøre teksten hvid*/
-a:link {
-    color: #ffffff;
-    text-decoration: none;
+/*.w3-left {
+margin:0 40px;
+cursor:pointer;
+display:inline-block; 
 }
-/*når man hover over bliver teksten understrejet, og indikere klikbarhed
-a:hover{
-    text-decoration: underline;*/
-a:visited{
-     text-decoration: none;
-     color: #ffffff;
-
+.w3-right, .w3-badge {
+    margin: 0 1200px;
+    cursor:pointer;
+    display: inline-block;
+}*/
+.move-front {
+    margin-left: 35px;
 }
-
-@media (max-width: 700px) {
-}
-.burger, .toggle-menu {
-    display: block;   
-
-}
-.header {
-    padding: 10px 20px;
-
-}
-.menu {
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: -500px;
+/*https://www.w3schools.com/csS/css3_buttons.asp*/
+.bluebutton1 {
     background-color: #2b4257;
-    width: 300px;
-    height: 100%;
-    padding-top: 65px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 145px;
+    height: 42px;
 }
-.menu li {
-    width: 100%;   
-}
-.menu li a{
-    padding: 30px;
-    font-size: 24px;
-}
-.menu li a:hover {
-text-decoration: underline;
-}
-.lob {
-    margin-right: 740px;
-    font-size: 30px;
+.bluebutton2 {
+    background-color: #2b4257;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 145px;
+    height: 42px;
+}    
+.frontbuttons {
+    display: inline-block;
  
 }
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #FBB80F;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 145px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #494848;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #E39603;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color:#E39603;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #F0EEEE;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #494848;
+}
+
+.form-container {
+    font-size: 16px;
+    color: #494848;
+    font-weight: bold;
+}
+
+/* When the inputs get focus, do something*/
+.form-container input[type=text]:focus {
+  background-color: #F0EEEE;
+  outline: none;
+} 
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #FBB80F;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  color: #494848;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #FBB80F;
+  font-size: 16px;
+  color: #494848;
+  font-weight: bold;
+}
+
+/* Add some hover effects to buttons 
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}*/
+
 footer {
     background-color: #2b4257;
     color: #ffffff;
     padding: 10px;
     display: flex;
-    margin-top: 1444px;
+    margin-top: 10%;
     justify-content: space-between;
     text-align: left;
-
 }
-
+        
 footer ul {
     list-style-type: none; 
+<<<<<<< Updated upstream
 }
 
+=======
+}    
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
+    .navigation a:not(:first-child) {display: none;}
+    .navigation a.icon, .i.fa.fa-bars {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 700px) {
+    .navigation.responsive {position: relative;}
+    .navigation.responsive a.icon, .i.fa.fa-bars {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navigation.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+>>>>>>> Stashed changes
