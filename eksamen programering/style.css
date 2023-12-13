@@ -62,6 +62,7 @@ a:link, a:visited {
 }
 @media only screen and (min-width: 701px) {
 .fa.fa-bars, .icon {display: none;}
+
 }
 
 /* margin-left placerer logoet i venstre side af skærmen. position sticky sørger for at logoet følger navigationsbar
@@ -85,16 +86,27 @@ z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til t
 /*.w3-left {
 margin:0 40px;
 cursor:pointer;
-display:inline-block; 
+display:inline-table; 
 }
 .w3-right, .w3-badge {
-    margin: 0 1200px;
+    margin: 0 680px;
     cursor:pointer;
-    display: inline-block;
+    display: inline-table;
 }*/
 .move-front {
     margin-left: 35px;
 }
+
+/*.arrow {
+  margin-top: 10px;
+  margin-left: 280px;
+  margin-right: 20px;
+  cursor: pointer;
+  display: inline-table;
+  justify-content: center;
+ 
+}*/
+
 /*https://www.w3schools.com/csS/css3_buttons.asp*/
 .bluebutton1 {
     background-color: #2b4257;
@@ -243,4 +255,6 @@ footer ul {
       text-align: left;
     }
   }
+
+  
   
