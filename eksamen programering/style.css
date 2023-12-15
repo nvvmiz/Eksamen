@@ -10,6 +10,9 @@ padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav 
 
 .tekst, .h1, .h2, .h3 {
     color: #494848;
+}
+.tekst {
+font-size: 16px;
 
 }
 
@@ -31,7 +34,7 @@ padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav 
 
 } 
 .navigation a {
-    float: right;
+    float: left;
     display: block;
     color: #ffffff;
     padding: 20px 20px;
@@ -51,6 +54,7 @@ padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav 
 }
 .navigation a.icon {
     display: contents;
+
 }
 
 a.hover {
@@ -62,53 +66,52 @@ a:link, a:visited {
 }
 @media only screen and (min-width: 701px) {
 .fa.fa-bars, .icon {display: none;}
-
 }
 
 /* margin-left placerer logoet i venstre side af skærmen. position sticky sørger for at logoet følger navigationsbar
 z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til toppen*/
-.logo {
-    margin-left: 30px;
+/*.logo {
+    margin-left: 15px;
     z-index: 1;
     position: sticky;
-    top: 10px;
+    top: 1px;
     display: block;
-}        
+}      */ 
 .logo a img {
         display: flex;
     }
+.logo a {
+padding: 0;
+margin-right: 55%;
+margin-left: 4%;
+}
     
 .mySlides {
     margin-top: 50px;
     margin-left: 2.8%;
     margin-right: 1.5%;
 }
-/*.w3-left {
-margin:0 40px;
+.w3-left {
+margin-left: 20%;
 cursor:pointer;
-display:inline-table; 
+display:inline-block; 
 }
-.w3-right, .w3-badge {
-    margin: 0 680px;
+.w3-right {
+    margin-right: 8%;
+    margin-left: 62%;
     cursor:pointer;
-    display: inline-table;
-}*/
+    display: inline-block;
+}
+
+.w3-center.w3-container.w3-section.w3-large.w3-text-white.w3-display-bottommiddle {
+    margin-top: 1%;
+}
+
 .move-front {
     margin-left: 35px;
 }
-
-/*.arrow {
-  margin-top: 10px;
-  margin-left: 280px;
-  margin-right: 20px;
-  cursor: pointer;
-  display: inline-table;
-  justify-content: center;
- 
-}*/
-
 /*https://www.w3schools.com/csS/css3_buttons.asp*/
-.bluebutton1 {
+.bluebutton1, .bluebutton2 {
     background-color: #2b4257;
     border: none;
     color: white;
@@ -118,28 +121,23 @@ display:inline-table;
     font-size: 16px;
     width: 145px;
     height: 42px;
+
 }
-.bluebutton2 {
-    background-color: #2b4257;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    width: 145px;
-    height: 42px;
-}    
+
 .frontbuttons {
-    display: inline-block;
- 
+    display: inline;
+    margin-left: 10%;
 }
+/*Skjuler de to blå CTA'er, når skærmer er på minimum 900 px.*/
+@media screen and (min-width: 900px) {
+.frontbuttons {display: none;}
+  }
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
   background-color: #FBB80F;
-  padding: 16px 20px;
-  border: none;
+  padding:16px 20px;
+  border:none;
   cursor: pointer;
   position: fixed;
   bottom: 23px;
@@ -222,22 +220,31 @@ footer {
     background-color: #2b4257;
     color: #ffffff;
     padding: 10px;
-    display: flex;
+    display: block;
     margin-top: 10%;
+    padding: 1px;
     justify-content: space-between;
     text-align: left;
+
 }
         
 footer ul {
     list-style-type: none;
-    } 
+}
+/*Vi havde problemer med at vores footer og pop-up tilmeldningsknap gav et gap i vores footer, når skærmsstørrelsen var mindre end 700px. Vi fik hjælp af ChatGPT til at finde problemet: https://chat.openai.com/share/5287e549-4caa-4901-ab90-858af1efbe7f*/
+@media screen and (max-width: 700px) {
+    footer {
+    margin-top: 20%;
+}         
+}
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 700px) {
     .navigation a:not(:first-child) {display: none;}
     .navigation a.icon, .fa.fa-bars {
       float: right;
       display: block;
+      font-size: 30px;
     }
   }
   
@@ -247,7 +254,9 @@ footer ul {
     .navigation.responsive a.icon, .fa.fa-bars {
       position: absolute;
       right: 0;
-      top: 0;
+      top: 2.5%;
+      left: 93%;
+
     }
     .navigation.responsive a {
       float: none;
@@ -255,6 +264,4 @@ footer ul {
       text-align: left;
     }
   }
-
-  
   

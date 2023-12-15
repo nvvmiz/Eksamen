@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="da">
-
 <head>
     <!--W3 scool : Så symboler og alle sprog på nettet kan blive læst  ??????????-->
     <meta charset="UTF-8">
@@ -23,54 +22,54 @@
   #leftsidebar {width: 200px; float: left;}
   #main {margin-left: 15px;}
   }
+</style>
 
-    </style>
-    </head>
 <body>
+
    <!-- <div class="lob">Lind Old Boys</div>-->
-    <div class="navigation" id="myNavigation">
-        <div> <img class="logo" src="images/logo.png" alt="logo for Lind old boys"></a></div>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="Sport.html">Sport</a>
-        <a href="fællesskabet.html">Fællesskabet</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
-    </div> 
-    
+   <div class="navigation" id="myNavigation">
+    <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
+  </div> 
+    <a href="fællesskabet.html">Fællesskabet</a>
+    <a href="Sport.html">Sport</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+    <i class="fa fa-bars"></i>
+</div>
+
 <!-- A button to open the popup form https://www.w3schools.com/howto/howto_js_popup_form.asp-->
 <button class="open-button" onclick="openForm()">Tilmeld dig</button>
 
 <!-- The form -->
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <label for="name"><b>Fulde Navn</b></label>
-    <input type="text" placeholder="Fulde Navn" name="name" required>
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Email adresse" name="email" required>
-    <label for="Tlfnumber"><b>Tlf. nr.</b></label>
-    <input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
-    <label for="valgmulighed">Aktiviteter</label>
-    <select id="valgmulighed" name="valgmulighed">
-      <option value="hyggerne">Hyggerne</option>
-      <option value="fodbold 28+">Fodbold 28+</option>
-      <option value="fodbold 40+">Fodbold 40+</option>
-      <option value="badminton">Badminton</option>
-      <option value="volley">Volleyball</option>
-      <option value="motion">Motion</option>
-      <option value="gaa">Løb/Gå</option>
-    </select>
-   <!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
+<form action="/action_page.php" class="form-container">
+<label for="name"><b>Fulde Navn</b></label>
+<input type="text" placeholder="Fulde Navn" name="name" required>
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Email adresse" name="email" required>
+<label for="Tlfnumber"><b>Tlf. nr.</b></label>
+<input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
+<label for="valgmulighed">Aktiviteter</label>
+<select id="valgmulighed" name="valgmulighed">
+  <option value="hyggerne">Hyggerne</option>
+  <option value="fodbold 28+">Fodbold 28+</option>
+  <option value="fodbold 40+">Fodbold 40+</option>
+  <option value="badminton">Badminton</option>
+  <option value="volley">Volleyball</option>
+  <option value="motion">Motion</option>
+  <option value="gaa">Løb/Gå</option>
+</select>
+<!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
 
-    <button type="submit" class="btn">Tilmeld mig</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
-  </form>
+<button type="submit" class="btn">Tilmeld mig</button>
+<button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
+</form>
 </div>
+  
+   
 
-<div>
 
-
-</body>
 <footer>
   <ul>
     <li><a href="privat.html">Privatlivspolitik</a></li><br> 
@@ -91,6 +90,8 @@
       }
     }
     </script> 
+
+ 
     <script>
       /*https://www.w3schools.com/howto/howto_js_popup_form.asp*/
       function openForm() {
@@ -101,6 +102,7 @@
         document.getElementById("myForm").style.display = "none";
       }
       </script>   
+    
     
 </body>
 </html>

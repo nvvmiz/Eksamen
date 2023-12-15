@@ -2,20 +2,34 @@
 <html lang="da">
 
 <head>
-    <!--W3 scool : Så symboler og alle sprog på nettet kan blive læst  ??????????-->
-    <meta charset="UTF-8">
-    <!-- Responsive Web Design, Tilpasser sig til alle skærmstørrelser-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Titel Fremvises i browserens fanevindue( LOB..) -->
-    <title>LOB</title>
-    <!--Link til css style sheet-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
-    <meta name="robots" content="noindex"> 
-    <!-- dette er vores tekst font-->
-    <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!--W3 scool : Så symboler og alle sprog på nettet kan blive læst  ??????????-->
+     <meta charset="UTF-8">
+     <!-- Responsive Web Design, Tilpasser sig til alle skærmstørrelser-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Titel Fremvises i browserens fanevindue( LOB..) -->
+     <title>LOB</title>
+     <!--Link til css style sheet-->
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
+     <meta name="robots" content="noindex"> 
+     <!-- dette er vores tekst font-->
+     <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     </head>
+ <body>
+    <!-- <div class="lob">Lind Old Boys</div>-->
+     <div class="navigation" id="myNavigation">
+         <div class="logo">
+         <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
+       </div> 
+         <a href="fællesskabet.html">Fællesskabet</a>
+         <a href="Sport.html">Sport</a>
+         <a href="kontakt.html">Kontakt</a>
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+         <i class="fa fa-bars"></i>
+   </div>
+
     <style>
     .move-right {
   margin-left: 30px;
@@ -23,16 +37,7 @@
   </style>
     </head>
 <body>
-   <!-- <div class="lob">Lind Old Boys</div>-->
-    <div class="navigation" id="myNavigation">
-        <div> <img class="logo" src="images/logo.png" alt="logo for Lind old boys"></a></div>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="Sport.html">Sport</a>
-        <a href="fællesskabet.html">Fællesskabet</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
-    </div> 
+  
     <div id="content" class="move-right">
       <br><br>    
       <h1> Privatlivspolitik </h1>
@@ -275,25 +280,27 @@
       </p>
   </div>    
 
-<footer>
-  <ul>
-    <li><a href="privat.html">Privatlivspolitik</a></li><br> 
-    <li><a href="vedtægter.html">Vedtægter</a></li><br>
-    <li>Andre foreninger:</li>
-    <li>lindoldgirls.dk | lindborger.dk | alpihallerne.dk | desmaaklinger.dk</li>
-    <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
-</ul>
-</footer>
-
-<script>
-    function myFunction() {
-      var x = document.getElementById("myNavigation");
-      if (x.className === "navigation") {
-        x.className += " responsive";
-      } else {
-        x.className = "navigation";
+  <footer>
+    <ul>
+      <li><a href="privat.html">Privatlivspolitik</a></li><br> 
+      <li><a href="vedtægter.html">Vedtægter</a></li><br>
+      <li>Andre foreninger:</li>
+      <li>lindoldgirls.dk | lindborger.dk | alpihallerne.dk | desmaaklinger.dk</li>
+      <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
+  </ul>
+  </footer>
+  
+  <script>
+      function myFunction() {
+        var x = document.getElementById("myNavigation");
+        if (x.className === "navigation") {
+          x.className += " responsive";
+        } else {
+          x.className = "navigation";
+        }
       }
-    }
-    </script> 
+      </script> 
+  
+
 </body>
 </html>

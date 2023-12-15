@@ -2,74 +2,454 @@
 <html lang="da">
 
 <head>
-    <!--W3 scool : Så symboler og alle sprog på nettet kan blive læst  ??????????-->
-    <meta charset="UTF-8">
-    <!-- Responsive Web Design, Tilpasser sig til alle skærmstørrelser-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Titel Fremvises i browserens fanevindue( LOB..) -->
-    <title>LOB</title>
-    <!--Link til css style sheet-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
-    <meta name="robots" content="noindex"> 
-    <!-- dette er vores tekst font-->
-    <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
+  <!--W3 scool : Så symboler og alle sprog på nettet kan blive læst  ??????????-->
+  <meta charset="UTF-8">
+  <!-- Responsive Web Design, Tilpasser sig til alle skærmstørrelser-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Titel Fremvises i browserens fanevindue( LOB..) -->
+  <title>LOB</title>
+  <!--Link til css style sheet-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
+  <meta name="robots" content="noindex">
+  <!-- dette er vores tekst font-->
+  <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /*Div. gallery style er den boks, som omfanger vores images og tekst. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
+    div.gallery {
+    border: none;
+    margin-top: 5px;
+  } 
+
+    /*div.gallery:hover {
+       border: 1px solid #777;
+      }*/
+    /* div.gallery img er det størrelsesforhold vores billede skal have. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    /*.desc er den lille boks, som indeholder vores tekstbeskrivelser, som er placeret under billedet.Vi har bl.a. lagt den samme farve på, som vores nav.
+    Derudover har vi givet den padding, så der er luft mellem teksten og kanten til boksen. Vi har brugt text-align til at centre vores tekst, og givet den en font-size.  https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
+    .desc {
+      padding: 15px;
+      text-align: center;
+      background-color: #2b4257;
+      color: #fff;
+      font-size: 16px;
+      width: 100%;
+      border: none;
+    }
+    /*.desc:hover er en "animeret" indikation ved hjælp af CSS på vores tekstboks. Vi har en border på 1px, som er farvet i en mørkebrun farve, således det ligner at boksen har en animation, når brugeren kører musen henover feltet.  https://www.w3schools.com/howto/howto_css_image_gallery.asp */
+    .desc:hover {
+      border: 1px solid #777;
+
+    }
+   /*.soctitel er styling på bestemte overskrifter på vores side. Vi har givet den noget margin-bottom og margin-top, således der er noget space
+   mellem vores navigationbar samt vores elementer placeret under overskrifterne.Derudover er der angivet en font-size, farve og vægt.*/
+    .soctitel {
+      margin-bottom: 15px;
+      margin-top: 18px;
+      font-size: 20px;
+      margin-left: 10px;
+      color: #494848;
+      font-weight: bold;
+    }
+
+    /**/
+    * {
+      box-sizing: border-box;
+    }
+   /*.Responsive er den klasse, som vi har rundt om vores div.gallery. Responsive flytter på elementerne,
+   således, at vores boks https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+  /*Media only screen - max-width 700px, angiver hvilken størrelse boksen skal have, når de fremvises på en skærm op til 700 px. https://www.w3schools.com/howto/howto_css_image_gallery.asp*/ 
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+    /*Media only screen - max-width 500px, angiver hvilken størrelse boksen skal have, når de fremvises på en skærm op til 700 px. https://www.w3schools.com/howto/howto_css_image_gallery.asp*/ 
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+  /* https://www.w3schools.com/howto/howto_css_clearfix.asp*/
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .fontklub {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .signature {
+      width: 20%;
+      height: auto;
+    }
+
+    /* The Modal (background) */
+    .modal,
+    .modalbow,
+    .modalgril,
+    .modalG {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content,
+    .referat-content,
+    .bowling-content,
+    .grill-content {
+      background-color: #F9F6F0;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 3px solid #2b4257;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+      color: #000;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
 <body>
-   <!-- <div class="lob">Lind Old Boys</div>-->
-    <div class="navigation" id="myNavigation">
-        <div> <img class="logo" src="images/logo.png" alt="logo for Lind old boys"></a></div>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="Sport.html">Sport</a>
-        <a href="fællesskabet.html">Fællesskabet</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
-    </div> 
-    
-<!-- A button to open the popup form https://www.w3schools.com/howto/howto_js_popup_form.asp-->
-<button class="open-button" onclick="openForm()">Tilmeld dig</button>
+  <!-- <div class="lob">Lind Old Boys</div>-->
+   <div class="navigation" id="myNavigation">
+       <div class="logo">
+       <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
+     </div> 
+       <a href="fællesskabet.html">Fællesskabet</a>
+       <a href="Sport.html">Sport</a>
+       <a href="kontakt.html">Kontakt</a>
+       <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+       <i class="fa fa-bars"></i>
+ </div>
 
-<!-- The form -->
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <label for="name"><b>Fulde Navn</b></label>
-    <input type="text" placeholder="Fulde Navn" name="name" required>
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Email adresse" name="email" required>
-    <label for="Tlfnumber"><b>Tlf. nr.</b></label>
-    <input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
-    <label for="valgmulighed">Aktiviteter</label>
-    <select id="valgmulighed" name="valgmulighed">
-      <option value="hyggerne">Hyggerne</option>
-      <option value="fodbold 28+">Fodbold 28+</option>
-      <option value="fodbold 40+">Fodbold 40+</option>
-      <option value="badminton">Badminton</option>
-      <option value="volley">Volleyball</option>
-      <option value="motion">Motion</option>
-      <option value="gaa">Løb/Gå</option>
-    </select>
-   <!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
+  <p class="soctitel">Om os</p>
+  <div style="padding-left:10px;">
+  <p class="tekst">Foreningens lokale, <strong>LOBbyen,</strong> er beliggende i kælderen under hal 2 i Alpi Hallerne.
+  </p>
+  <p class="tekst">Du behøver aldrig kede dig, hvis du bliver medlem af LOB, hvor vi kommer hinanden ved og mødes til
+      klubtræf onsdag aften og lørdag formiddag eller når vi, i samlet flok besætter en del af Faxe Kondi tribunen på
+      MCH Arena.</p>
+<p class="tekst"><strong>LOBbyen er til fællesskabet, og bruges:</strong></p>
+    <ul>
+      <li class="tekst">Hver <strong>onsdag</strong> fra kl. 19:30 til kl. 21:30 er LOBbyen åben, hvor der er mulighed
+        for hyggeligt samvær med f.eks. et spil pool eller se fodboldkampe i TV’et.</li>
+      <li class="tekst">Hver <strong>lørdag</strong> fra kl. 11:00 til kl. 13:00 er LOBbyen ligeledes åbent for at få en
+        hyggelig sludder og et spil pool.</li>
+      <li class="tekst">Hver <strong>søndag</strong> formiddag efter løbeturen til en kop kaffe, vand eller øl.</li>
+      <li class="tekst">Og efter <strong>alle</strong> fodbold <strong>hjemmekampe</strong> til en kop kaffe, vand eller
+        øl.</li>
+    </ul>
+  </div>
 
-    <button type="submit" class="btn">Tilmeld mig</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
-  </form>
-</div>
+  <p class="soctitel">Arrangementer & opdateringer</p>
+  <!--https://www.w3schools.com/howto/howto_css_image_gallery.asp & https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_dots2 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_gallery-->
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/Dartsklub.png">
+        <img src="images/Dartsklub.png" alt="Cinque Terre" width="600" height="400"></a>
+      <button class="desc" id="myBtn">Dart konkurrence d. 22/12</button>
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/men.png">
+        <img src="images/men.png" alt="Mænd siddende ved en computer" width="600" height="400"></a>
+      <button class="desc" id="BtnG">Generalforsamling</button>
+      <div id="ModalG" class="modalG">
+
+        <!-- Modal content. Det indhold som er placeret inde i overlayen (modal boksen)-->
+        <div class="referat-content">
+          <span class="close">&times;</span>
+          <h2>Generalforsamling, søndag den 30. april 2023 kl. 12.15 i LOBbyen.</h2>
+          <p><strong>Dagsorden:</strong></p>
+          <ol>
+            <li>Valg af dirigent.</li>
+            <li>Aflæggelse af beretning.</li>
+            <li>Forelæggelse af det reviderede regnskab.</li>
+            <li>Behandling af forslag.</li>
+            <li>Fastsættelse af kontingent.</li>
+          </ol>
+          <p><strong>På valg til bestyrelsen</strong></p>
+          <p><strong> A. Bestyrelsesmedlemmer.</strong></p>
+          <ul>
+            <li class="referatliste">Niel Arne Markussen - modtager genvalg.</li>
+            <li class="referatliste">Henry Gade - modtager genvalg.</li>
+            <li class="referatliste">Allan Thomsen - modtager genvalg.</li>
+            <li class="referatliste">Men, modkandidater til bestyrelsen er mere end velkomne.</li>
+          </ul>
+          <p><strong>B. Suppleanter.</strong></p>
+          <p><strong>C. Revisorer.</strong></p>
+          <p><strong>D. Revisorsuppleant.</strong></p>
+          <p><strong>7. Eventuelt.</strong></p>
+          <p class="fontklub"> 1, valg af dirigent:</p>
+          <p>Efter <u>formand Allan Thomsens</u> velkomst til foreningens 54. ordinære generalforsamling, hvor der
+            deltog ca. 20 medlemmer, foreslog han på bestyrelsens vegne Jens Devantier som dirigent. Der var ikke andre
+            forslag, hvorefter Jens var valgt.</p>
+          <p></p>Jens takkede for valget og konstaterede, at generalforsamlingen var lovlig indvarslet med 14 dages
+          varsel, jfr. Vedtægternes § 7.</p>
+          <p class="fontklub">Ad 2, aflæggelse af beretning:</p>
+          <p><u>Allan Thomsen</u>aflagde beretning for det seneste år og sagde bla.: Stor tak til alle jer som har valgt
+            at støtte op omkring generalforsamlingen i LOB og være med til at styrke det fællesskab som der er i
+            klubben. Det er i år den 54. generalforsamling i LOB og vi kan kigge tilbage på et 2022 med normale
+            tilstande uden Corona nedlukninger.</p>
+          <p>Sidste år var vi 17 mand til GF, hvilket er det laveste jeg har været med til som formand. Derfor er det
+            rart at se så mange har bakket op om GF i år. Specielt også de ”unge” i klubben som har valgt at komme i år.
+          </p>
+          <p>Traditionen tro vil jeg gerne give et tilbageblik på året der er gået siden sidste generalforsamling – og
+            dette indebærer selvsagt også et indblik over årets gang i de enkelte afdelinger i LOB.</p>
+
+          <p><strong>Fodbold</strong></p>
+          <p>I udendørsturneringen har vi haft 2 hold med i 2022 - 30+ og 40+. 30+ som et normalt 11 mands hold mens 40+
+            stillede op som 9/11 pga. dalende medlemmer i aldersgruppen.</p>
+          <p>Resultaterne har været meget tilfredsstillende sidse år. Vores 30+ hold endte i slutspillet med de bedste
+            hold. Det rakte dog ikke til nogen oprykning men det tror jeg de fleste var glade for.</p>
+          <p>40+ rækken startede flot ud i foråret men endte alligevel sidst i puljen.</p>
+          <p>Totalt er der ca. 45 fodboldspillere og i år håber vi at mange af kampene i 40+ rækken kan afvikles som
+            normale 11 mands kampe.</p>
+
+          <p><strong>Badminton</strong></p>
+          <p>Der spilles fortsat hver uge på Højgårdsskolen hvor de nyder hinandens selskab. 4 spillere har desuden en
+            bane i ALPI HALLERNE hver mandag.</p>
+          <p>Badminton består af ca. 13 spillere</p>
+
+          <p><strong>Volleyball</strong></p>
+          <p>Volleyball har desværre været meget udfordret på antal spillere. Mange kampaftener har desværre måtte
+            aflyses pga. for få spillere, selvom Finn Reimer har gjort et fantastisk arbejde med at skaffe spillere og
+            holde liv i de hyggelige volleyaftener hver onsdag.</p>
+          <p>Selvom vi desværre har fået udmeldinger fra flere volleyballspillere, inkl. Finn selv, så vil vi kæmpe for
+            at få spilletid i ALPIHALLERNE når sæsonen starter op igen i september.</p>
+          <p>Jørgen Eybye har forsøgt at hverve spillere på Facebook og forhåbentlig resulterer det i nye spillere til
+            den kommende sæson.</p>
+
+          <p><strong>Gå & Løb</strong></p>
+          <p>Der er stadig 3 løbere tilbage som mødes hver søndag, og nyder hinandens selskab.Der gås/løbes ca. 8 km.
+          </p>
+
+          <p><strong>Hyggerne</strong></p>
+          <p>Hyggerne kommer også trofast til klubaftener hver onsdag aften og lørdag middag, hvor der som oftest
+            spilles pool om en omgang øl. Selvom flere af dem ikke er aktive idrætsudøvere så betyder de en stor del for
+            det liv der er til klubaftener hver onsdag samt hygge lørdag middag.</p>
+
+          <p class="fontklub"> Aktiviteter i 2022</p>
+          <p>I løbet af 2022 har bestyrelsen i LOB også forsøgt at skabe nogle aktiviteter på benene.</p>
+
+          <p>Oktoberfesten blev ikke afholdt i 2022 grundet det lave fremmøde i 2021, hvor det blev gennemført med kun
+            13 tilmeldinger. I bestyrelsen valgte vi derfor at ændre festen til en forårsfest i håb om at flere
+            medlemmer ville bakke op om arrangementet på denne tid af åres. Desværre er der ikke kommet så mange
+            tilmeldinger.</p>
+          <p>Sidste år på GF foreslog Søren Ravnsborg en tur til Søby Brunkulslejre.
+            Søren var selv en stor primus motor til at turen blev afviklet. Turen blev gennemført i bus med guide.
+            Selvom opbakningen ikke var så stor, så havde Søren lagt et kæmpe arbejde i at skabe et godt arrangementet.
+            Tak for det Søren.</p>
+          <p>Det årlige bowlingarrangement blev desværre ikke afholdt i 2022. Det var oprindelig planlagt en tirsdag
+            aften i september måned. Men det var ikke muligt at få baner pga. firmabowling som lå samme dag.
+            Arrangementet havde ellers stor opbakning i 2021 hvor vi bookede 4 baner til arrangementet.</p>
+
+          <p>Vores medlemstal i klubben ligger stadig på omkring 100 medlemmer. Selvom ca. 15 medlemmer har valgt at
+            stoppe i LOB af den ene eller anden grund, så er der kommet lige så mange nye medlemmer til. Det er primært
+            fodboldspillere som har fået flere spillere.</p>
+
+          <p>Til sidst vil jeg gerne sige tak til alle dem som kommer troligt til klubaftener for at skabe liv i
+            klubben, sørger for øl i LOBbyen og generelt bare er med til at skabe en god stemning i vores fælles
+            klublokale.</p>
+          <p>Tak skal der også lyde til de øvrige bestyrelsesmedlemmer og suppleanter som bidrager positivt til at vores
+            mange klubaktiviteter bliver arrangeret og afholdt.</p>
+
+          <p class="fontklub">3, Regnskab</p>
+          <p><u>Kasserer Henry Gade</u> fremlagde følgende regnskab.</p>
+          <p>Regnskabet vedlagt som selvstændig fil.</p>
+
+          <p class="fontklub">Pkt. 4, Indkomne forslag</p>
+          <p><u>Formanden</u> fortsatte herefter punktet indkomne forslag. I følge LOB´s vedtægter § 13 skal der føres
+            protokol (referat) over vedtagne beslutninger, og protokollerne skal underskrives af bestyrelsen – senest
+            ved næste møde.</p>
+          <p>Bestyrelsen foreslår, at underskrift erstattes af godkendes.</p>
+          <p>Forslaget blev enstemmigt vedtaget af generalforsamlingen, og er indført i vedtægterne.</p>
+
+          <p class="fontklub">Ad 5, fastsættelse af kontingent</p>
+          <p><u>Formanden, Allan Thomsen</u> oplyste, at en forhøjelse på 50,- (gældende fra 2024) blev vedtaget på
+            sidste generalforsamling, hvorfor bestyrelsen denne gang foreslog uændret kontingent.</p>
+          <p>Der var ikke andre forslag, og forslaget blev enstemmigt vedtaget.</p>
+          <p class="fontklub">Ad 6, valg af bestyrelsesmedlemmer og suppleanter</p>
+          <!--https://www.w3schools.com/html/html_lists_ordered.asp List type with A, B, C -->
+          <ol type="A">
+            <li>På valg til bestyrelsen var Niels Arne Markussen, Henry Gade og Allan Thomsen, alle var villige til
+              genvalg, og alle blev genvalgt uden modkandidater.</li>
+            <li>Som suppleanter genvalgtes Karl-Jørgen Nielsen og Christian Moesgaard uden modkandidater.</li>
+            <li>Niels Møller Grout og Søren Raunsgaard genvalgtes uden modkandidater som revisorer.</li>
+            <li>Som revisorsuppleant valgtes John Henriksen.</li>
+          </ol>
+          <p class="fontklub">Ad 7, Eventuelt</p>
+          <p>Blandt generalforsamlingsdeltagerne foretog bestyrelsen udtrækning af 5 medlemmer (Karl-Jørgen Nielsen,
+            Henry Gade, Johan Juul, Teilman og Søren Raunsgaard), der hver modtog et ølkort til Lobbyen.</p>
+          <p>Der var opfordring til at klubben fortsat sendte orientering om arrangementer ud med på mail. Der var
+            forslag om en gentagelse af ”Søen rundt i Sunds”.</p>
+          <p>Der var opfordring til at gennemføre en grillaften i sommer (hvilket formanden kunne meddele var planlagt).
+            Der var endvidere en opfordring til at møde op til Jyllandsseriekampene i Lind.</p>
+          <p>En enkelt mente, det kunne være praktisk, hvis man betalte kontingent for 2 år ad gangen.</p>
+          <p>Formanden afsluttede herefter generalforsamlingen med tak til dirigenten og forsamlingen.</p>
+          <p>For referat: Bent Jensen</p>
+          <div class="signature">
+            <img src="images/underskrift.jpg" alt="Underskrift udført af referatskriver Bent Jensen">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/bowling.png">
+        <img src="images/bowling.png" alt="Bowling kegler" width="600" height="400"></a>
+      <button class="desc" id="BtnBo">Bowling mesterskab d. 26/10</button>
+      <div id="ModalBo" class="modalbow">
+
+        <!-- Modal content -->
+        <div class="bowling-content">
+          <span class="close">&times;</span>
+          <h2>LOB inviterer til årets Bowling mesterskab 2023, torsdag 26. oktober</h2>
+          <p>Mødetid i Herning Bowlinghal Kl. 17.45, Fyrrevej 6 – 7400 Herning</p>
+          <p>Vi spiller fra kl. 18.00 – 19.00</p>
+          <p>Pris per spiller kr. 75.00</p>
+          <p>Tilmelding senest den 18. oktober. Tilmelding på liste i Lobbyen - eller SMS til Kalle – 23353553</p>
+          <p>Præmie-overrækkelse efterfølgende i Lobbyen, hvor der ligeledes serveres 1 øl pr. deltager!</p>
+          <p>Mød op til en god aften!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <a target="_blank" href="images/sommeraften.png">
+        <img src="images/sommeraften.png" alt="Flere øl og en grill" width="600" height="400"></a>
+      <button class="desc" id="BtnGr">Grill ved Sunds Sø d. 11/9</button>
+      <div id="Modalgri" class="modalgril">
+
+        <!-- Modal content -->
+        <div class="grill-content">
+          <span class="close">&times;</span>
+          <h2> Sommer-Grill ved Sunds Sø</h2>
+          <p>Denne hyggeaften sammen med vores damer</p>
+          <p>Mandag den 11. September 2023 kl. 17.00.</p>
+          <p>Vi starter på nordsiden, Nordsøvej 20, hvor biler og cykler parkeres. Herfra vandrer vi i samlet flok mod
+            vest og har første stop på Søgaarden, hvor John Henriksen viser herlighederne frem, herunder de nye hytter
+            og camperpladsen.</p>
+          <p>Derefter igen i samlet flok mod øst til nordsiden, hvor vi nyder et glas kold hvidvin hos John Henriksen,
+            Nordstjernevej 44B.</p>
+          <p>Sidste stop er Nordsøvej 20, hvor Kalle har grillen klar med ristede pølser med tilbehør, dertil nydes
+            sikkert en øl eller to, og naturligvis er der også hvidvin og lignende.</p>
+          <p>LOB er ”hovedsponsor” med maden og beværtningen hos John – derefter går vi over til egenbetaling til
+            nettopriser.</p>
+          <p>ABSOLUT bindende tilmelding senest 4. september til Kalle SMS 2335 3553 eller på listen i LOBbyen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <!-- A button to open the popup form https://www.w3schools.com/howto/howto_js_popup_form.asp-->
+  <button class="open-button" onclick="openForm()">Tilmeld dig</button>
+
+  <!-- The form -->
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <label for="name"><b>Fulde Navn</b></label>
+      <input type="text" placeholder="Fulde Navn" name="name" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Email adresse" name="email" required>
+      <label for="Tlfnumber"><b>Tlf. nr.</b></label>
+      <input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
+      <label for="valgmulighed">Aktiviteter</label>
+      <select id="valgmulighed" name="valgmulighed">
+        <option value="hyggerne">Hyggerne</option>
+        <option value="fodbold 28+">Fodbold 28+</option>
+        <option value="fodbold 40+">Fodbold 40+</option>
+        <option value="badminton">Badminton</option>
+        <option value="volley">Volleyball</option>
+        <option value="motion">Motion</option>
+        <option value="gaa">Løb/Gå</option>
+      </select>
+      <!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
+
+      <button type="submit" class="btn">Tilmeld mig</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
+    </form>
+  </div>
 
 
-<footer>
-  <ul>
-    <li><a href="privat.html">Privatlivspolitik</a></li><br> 
-    <li><a href="vedtægter.html">Vedtægter</a></li><br>
-    <li>Andre foreninger:</li>
-    <li>lindoldgirls.dk | lindborger.dk | alpihallerne.dk | desmaaklinger.dk</li>
-    <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
-</ul>
-</footer>
+  <footer>
+    <ul>
+      <li><a href="privat.html">Privatlivspolitik</a></li><br>
+      <li><a href="vedtægter.html">Vedtægter</a></li><br>
+      <li>Andre foreninger:</li>
+      <li>lindoldgirls.dk | lindborger.dk | alpihallerne.dk | desmaaklinger.dk</li>
+      <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
+    </ul>
+  </footer>
 
-<script>
+  <script>
     function myFunction() {
       var x = document.getElementById("myNavigation");
       if (x.className === "navigation") {
@@ -78,17 +458,127 @@
         x.className = "navigation";
       }
     }
-    </script> 
-    <script>
-      /*https://www.w3schools.com/howto/howto_js_popup_form.asp*/
-      function openForm() {
-        document.getElementById("myForm").style.display = "block";
+  </script>
+  <script>
+    /*https://www.w3schools.com/howto/howto_js_popup_form.asp*/
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+
+
+  <script>
+    // Get the modal - For Dart Konkurrence 
+    var modal1 = document.getElementById("myModal");
+
+    // Get the button that opens the modal -  For Dart Konkurrence 
+    var btn1 = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span1 = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn1.onclick = function () {
+      modal1.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function () {
+      modal1.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal1) {
+        modal1.style.display = "none";
       }
-      
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+  <script>
+    // Get the modal - For referat Konkurrence 
+    var modal2 = document.getElementById("ModalG");
+
+    // Get the button that opens the modal -  For Referat generalforsamling  
+    var btn2 = document.getElementById("BtnG");
+
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn2.onclick = function () {
+      modal2.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal2.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal2) {
+        modal2.style.display = "none";
       }
-      </script>   
-    
+    }  
+  </script>
+  <script>
+    // Get the modal - For Bowling 
+    var modal3 = document.getElementById("ModalBo");
+
+    // Get the button that opens the modal -  For Bowling  
+    var btn3 = document.getElementById("BtnBo");
+
+    // Get the <span> element that closes the modal
+    var span3 = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn3.onclick = function () {
+      modal3.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span3.onclick = function () {
+      modal3.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal3) {
+        modal3.style.display = "none";
+      }
+    }
+  </script>
+  <script>
+    // Get the modal - For Grill 
+    var modal4 = document.getElementById("Modalgri");
+
+    // Get the button that opens the modal -  For Grill  
+    var btn4 = document.getElementById("BtnGr");
+
+    // Get the <span> element that closes the modal
+    var span4 = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn4.onclick = function () {
+      modal4.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span4.onclick = function () {
+      modal4.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal4) {
+        modal4.style.display = "none";
+      }
+    }
+  </script>
 </body>
+
 </html>
