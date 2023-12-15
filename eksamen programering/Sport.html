@@ -1,107 +1,72 @@
 <!DOCTYPE html>
-<html lang="da">
-
+<html lang="en">
 <head>
-    <!--W3 scool : Så symboler og alle sprog på nettet kan blive læst  ??????????-->
-    <meta charset="UTF-8">
-    <!-- Responsive Web Design, Tilpasser sig til alle skærmstørrelser-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Titel Fremvises i browserens fanevindue( LOB..) -->
-    <title>LOB</title>
-    <!--Link til css style sheet-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
-    <meta name="robots" content="noindex"> 
-    <!-- dette er vores tekst font-->
-    <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">  
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    .box-fodbold {
-        background-color: #2b4257;
-        padding: 10px;
-        color: #fff;
-        width: 473.36px;
-        height: 350px;
-        margin-block: 20px;
-    }
-    .box-badminton {
-        background-color: #2b4257;
-        padding: 10px;
-        color: #fff;
-        width: 473.36px;
-        height: 350px;
-        margin-block: 20px;
-    }
-    /*https://www.w3schools.com/css/css3_mediaqueries.asp*/
-    @media screen and (max-width: 480px) {
-  #leftsidebar {width: 200px; float: left;}
-  #main {margin-left: 15px;}
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    </style>
-    </head>
+  <!--W3 scool : Så symboler og alle sprog på nettet kan blive læst  ??????????-->
+  <meta charset="UTF-8">
+  <!-- Responsive Web Design, Tilpasser sig til alle skærmstørrelser-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Titel Fremvises i browserens fanevindue( LOB..) -->
+  <title>LOB</title>
+  <!--Link til css style sheet-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
+  <meta name="robots" content="noindex"> 
+  <!-- dette er vores tekst font-->
+  <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+</head>
 <body>
+
    <!-- <div class="lob">Lind Old Boys</div>-->
-    <div class="navigation" id="myNavigation">
-        <div> <img class="logo" src="images/logo.png" alt="logo for Lind old boys"></a></div>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="Sport.html">Sport</a>
-        <a href="fællesskabet.html">Fællesskabet</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-        </a>
-    </div> 
-    
+   <div class="navigation" id="myNavigation">
+    <div class="logo">
+    <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
+  </div> 
+    <a href="fællesskabet.html">Fællesskabet</a>
+    <a href="Sport.html">Sport</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+    <i class="fa fa-bars"></i>
+</div>
+
 <!-- A button to open the popup form https://www.w3schools.com/howto/howto_js_popup_form.asp-->
 <button class="open-button" onclick="openForm()">Tilmeld dig</button>
 
 <!-- The form -->
 <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <label for="name"><b>Fulde Navn</b></label>
-    <input type="text" placeholder="Fulde Navn" name="name" required>
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Email adresse" name="email" required>
-    <label for="Tlfnumber"><b>Tlf. nr.</b></label>
-    <input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
-    <label for="valgmulighed">Aktiviteter</label>
-    <select id="valgmulighed" name="valgmulighed">
-      <option value="hyggerne">Hyggerne</option>
-      <option value="fodbold 28+">Fodbold 28+</option>
-      <option value="fodbold 40+">Fodbold 40+</option>
-      <option value="badminton">Badminton</option>
-      <option value="volley">Volleyball</option>
-      <option value="motion">Motion</option>
-      <option value="gaa">Løb/Gå</option>
-    </select>
-   <!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
+<form action="/action_page.php" class="form-container">
+<label for="name"><b>Fulde Navn</b></label>
+<input type="text" placeholder="Fulde Navn" name="name" required>
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Email adresse" name="email" required>
+<label for="Tlfnumber"><b>Tlf. nr.</b></label>
+<input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
+<label for="valgmulighed">Aktiviteter</label>
+<select id="valgmulighed" name="valgmulighed">
+  <option value="hyggerne">Hyggerne</option>
+  <option value="fodbold 28+">Fodbold 28+</option>
+  <option value="fodbold 40+">Fodbold 40+</option>
+  <option value="badminton">Badminton</option>
+  <option value="volley">Volleyball</option>
+  <option value="motion">Motion</option>
+  <option value="gaa">Løb/Gå</option>
+</select>
+<!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
 
-    <button type="submit" class="btn">Tilmeld mig</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
-  </form>
+<button type="submit" class="btn">Tilmeld mig</button>
+<button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
+</form>
 </div>
+  
+   
 
-<div>
-<body>
-<title>Sporten</title>
-    <form>
-    <div class="box-fodbold">
-    <h2> Fodbold</h2>
-    </p>hver onsdag og torsdag <br>28+ onsdag kl.19:00-20:00 <br>40+ torsdag kl.19:00-20:00 <br> I vintersæssonen fællestræning </p>
-    </div>
-    </form>
-    <form>
-        <div class="box-badminton">
-                <h2>Badminton</h2>
-                <h4>Mandag(fra 1.okt til 31.marts)</h4>
-                <p>kl.19:00-20:00 <br>højgårdsskolen<br>
-                Tirsdag 21:00-22:00 resten af året<br>
-            alpihallerne,hal 3</p>
-        </div>
-    </form>
-
-</body>
 <footer>
   <ul>
     <li><a href="privat.html">Privatlivspolitik</a></li><br> 
@@ -122,6 +87,8 @@
       }
     }
     </script> 
+
+ 
     <script>
       /*https://www.w3schools.com/howto/howto_js_popup_form.asp*/
       function openForm() {
@@ -132,6 +99,7 @@
         document.getElementById("myForm").style.display = "none";
       }
       </script>   
+    
     
 </body>
 </html>

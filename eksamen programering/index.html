@@ -29,27 +29,7 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
         <i class="fa fa-bars"></i>
   </div>
-    <!--https://www.w3schools.com/w3css/w3css_slideshow.asp & https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_dots2-->
-      <div class="w3-content w3-display-container" style="width: 97%; height:50%">
-        <img class="mySlides" src="images/beer.png" style="width:97%; height:50%">
-        <img class="mySlides" src="images/fodbold.png" style="width:97%; height:50%">
-        <img class="mySlides" src="images/pool.png" style="width:97%; height:50%">
-        <img class="mySlides" src="images/volley.png" style="width:97%; height:50%">
-        <img class="mySlides" src="images/bar.png" style="width:97%; height:50%">
-      </div>
-      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-        <span class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094; </span>
-        <span class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095; </span> 
-      </div>
-      <div class="move-front">
-        <h1 class="h1">Lind Old Boys</h1>
-        <p class="tekst">Hold dig “sund” i et hyggeligt foreningsfælleskab for mænd.</p>
-        <p class="tekst">Lind Old Boys – ”gentleman-klubben” for alle i Lind og omegn på 28+. Klubben blev dannet i Lind 7. maj 1969 og har i dag over 100 medlemmer, men kan sagtens rumme flere.</p>
-      </div>
-      <div class="frontbuttons">
-      <button class="bluebutton1" type="button"><a href="fællesskabet.html">Fællesskabet</a></button>
-      <button class="bluebutton2" type="button"><a href="Sport.html">Sport</a></button></div>
-    
+  
 <!-- A button to open the popup form https://www.w3schools.com/howto/howto_js_popup_form.asp-->
 <button class="open-button" onclick="openForm()">Tilmeld dig</button>
 
@@ -80,6 +60,30 @@
 </div>
 
 
+    <!--https://www.w3schools.com/w3css/w3css_slideshow.asp & https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_dots2-->
+      <div class="w3-content w3-display-container" style="width: 97%; height:50%">
+        <img class="mySlides" src="images/beer.png" style="width:97%; height:50%">
+        <img class="mySlides" src="images/fodbold.png" style="width:97%; height:50%">
+        <img class="mySlides" src="images/pool.png" style="width:97%; height:50%">
+        <img class="mySlides" src="images/volley.png" style="width:97%; height:50%">
+        <img class="mySlides" src="images/bar.png" style="width:97%; height:50%">
+      </div>
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+        <span class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094; </span>
+        <span class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095; </span> 
+      </div>
+      <div class="move-front">
+        <h1 class="h1">Lind Old Boys</h1>
+        <p class="tekst">Hold dig “sund” i et hyggeligt foreningsfælleskab for mænd.</p>
+        <p class="tekst">Lind Old Boys – ”gentleman-klubben” for alle i Lind og omegn på 28+. Klubben blev dannet i Lind 7. maj 1969 og har i dag over 100 medlemmer, men kan sagtens rumme flere.</p>
+      </div>
+      <div class="frontbuttons">
+      <button class="bluebutton1" type="button"><a href="fællesskabet.html">Fællesskabet</a></button>
+      <button class="bluebutton2" type="button"><a href="Sport.html">Sport</a></button></div>
+    
+
+
+
 <footer>
   <ul>
     <li><a href="privat.html">Privatlivspolitik</a></li><br> 
@@ -100,34 +104,8 @@
       }
     }
     </script> 
- <script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-    
-    function plusDivs(n) {
-      showDivs(slideIndex += n);
-    }
-    
-    function currentDiv(n) {
-      showDivs(slideIndex = n);
-    }
-    
-    function showDivs(n) {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      if (n > x.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = x.length}
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-white", "");
-      }
-      x[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " w3-white";
-    }
-    </script>
+
+ 
     <script>
       /*https://www.w3schools.com/howto/howto_js_popup_form.asp*/
       function openForm() {
@@ -139,5 +117,34 @@
       }
       </script>   
     
+    <script> /* slet for undersider*/
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function currentDiv(n) {
+        showDivs(slideIndex = n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-white", "");
+        }
+        x[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " w3-white";
+      }
+      </script>
+  
 </body>
 </html>
