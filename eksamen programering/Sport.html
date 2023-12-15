@@ -16,62 +16,13 @@
     <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-<<<<<<< Updated upstream
-
-=======
-    .box-fodbold {
-        background-color: #2b4257;
-        padding: 10px;
-        color: #fff;
-        width: 473.36px;
-        height: 350px;
-        margin-block: 20px;
-    }
-    .box-badminton {
-        background-color: #2b4257;
-        padding: 10px;
-        color: #fff;
-        width: 473.36px;
-        height: 350px;
-        margin-block: 20px;
-    }
-    .box-volleyball {
-        background-color: #2b4257;
-        padding: 10px;
-        color: #fff;
-        width: 473.36px;
-        height: 350px;
-        margin-block: 20px;
-    }
-    .box-motion {
-        background-color: #2b4257;
-        padding: 10px;
-        color: #fff;
-        width: 473.36px;
-        height: 350px;
-        margin-block: 20px;
-    }
-    .box-løb {
-        background-color: #2b4257;
-        padding: 10px;
-        color: #fff;
-        width: 473.36px;
-        height: 350px;
-        margin-block: 20px;
-    }
->>>>>>> Stashed changes
     /*https://www.w3schools.com/css/css3_mediaqueries.asp*/
     @media screen and (max-width: 480px) {
   #leftsidebar {width: 200px; float: left;}
   #main {margin-left: 15px;}
   }
-<<<<<<< Updated upstream
 </style>
 
-=======
-    </style>
-    </head>
->>>>>>> Stashed changes
 <body>
 
    <!-- <div class="lob">Lind Old Boys</div>-->
@@ -114,61 +65,167 @@
 <button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
 </form>
 </div>
-  
-   
+<!DOCTYPE html>
+<html lang="da">
 
-<<<<<<< Updated upstream
-=======
-<div>
+<head>
+    <!--W3 scool : Så symboler og alle sprog på nettet kan blive læst  ??????????-->
+    <meta charset="UTF-8">
+    <!-- Responsive Web Design, Tilpasser sig til alle skærmstørrelser-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titel Fremvises i browserens fanevindue( LOB..) -->
+    <title>LOB</title>
+    <!--Link til css style sheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
+    <meta name="robots" content="noindex"> 
+    <!-- dette er vores tekst font-->
+    <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+
+/* baggrundsfarve på side og typografi */
+body {
+    background-color: #f9f6f0;
+    font-family: "oswald", sans-serif, Arial, Helvetica;
+}
+    /* hver sport har sin egen box. */
+    /* margin right: Er kun her i box-fodbold fordi den blev ved med at hænge fast på badminton.
+     Efter mange forsøg med alt muligt blev det her løsningen */
+    .box-fodbold {
+        background-color: #2b4257;
+        padding: 10px;
+        color: #fff;
+        width: 550px;
+        height: 400px;
+        margin-block: 20px;
+        margin-right: 30px;
+    }
+    .box-badminton {
+        background-color: #2b4257;
+        padding: 10px;
+        color: #fff;
+        width: 550px;
+        height: 400px;
+        margin-block: 20px;
+     }
+    .box-volleyball {
+        background-color: #2b4257;
+        padding: 10px;
+        color: #fff;
+        width: 550px;
+        height: 400px;
+        margin-block: 20px;
+    }
+    .box-motion {
+        background-color: #2b4257;
+        padding: 10px;
+        color: #fff;
+        width: 550px;
+        height: 400px;
+        margin-block: 20px;
+    }
+    .box-løb {
+        background-color: #2b4257;
+        padding: 10px;
+        color: #fff;
+        width: 550px;
+        height: 400px;
+        margin-block: 20px;
+    }
+
+
+ /* Row indsættes for at få boxene til at tilpasse sig skærmstørrelserne.
+ og boxene ligger sig under hinanden ved mobil størrelsen*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
+
+/* skaber ens columns ( her navngivet box- fodb.... osv for hvert element)
+der er ingen padding fordi det gav rod i tekst og billeder i boxene.*/
+.box.fodbold,.box-badminton,.box-volleyball,.box-motion,.box-løb {
+  flex: fixed;
+  margin-right: 30px;
+}
+
+/* på skærme der er 992px wide eller mindre, går fra 3 collums til  */
+@media screen and (max-width: 992px) {
+ .box-fodbold, .box-badminton, .box-volleyball, .box-motion, .box-løb {
+    flex: 33%;
+    padding: 20px;
+  }
+}
+
+/* på skærme der er 600px wide or less, få columns stakke sig over hinanden og ikke ved siden af hinanden */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    padding:20px;
+    margin-right: 20px;
+  }
+}
+/* størrelsen på h2 skrift i boxene*/
+h2 {
+    font-size: 45px;
+}
+/* størrelsen på brødtekst i boxene*/
+p{
+    font-size: 18px;
+}
+ </style>
+</head>
 <body>
 <title>Sporten</title>
-    <form>
-    <div class="box-fodbold">
-    <img src="images/fodboldlille.png" alt="fodbold">
-    <h2> Fodbold</h2>
-    </p>hver onsdag og torsdag <br>28+ onsdag kl.19:00-20:00 <br>40+ torsdag kl.19:00-20:00 <br> I vintersæssonen fællestræning </p>
+<div class="row"> <!--for at lave RWD som for boxene til at tilpasse sig skærmstørrelsen-->
+    <div class="box-fodbold"><!--er boxenes som indhold, billeder og facebook link  er i for hver sportsgren)
+        (collum men omdøbt)-->
+        <!-- skaber en boks til ndhold -->
+            <img src="images/fodboldlille.png" alt="fodbold">
+            <h2> Fodbold</h2>
+            <p>hver onsdag og torsdag <br>
+                28+ onsdag kl.19:00-20:00 <br>
+                40+ torsdag kl.19:00-20:00 <br> 
+               I vintersæssonen fællestræning </p>
+               <img src="images/Facebook.png" alt="facebook">
     </div>
-    </form>
-    <form>
         <div class="box-badminton">
                 <img src="images/badmintonlille.png" alt="badminton">
                 <h2>Badminton</h2>
-                <hp>Mandag(fra 1.okt til 31.marts)</p>
-                <p>kl.19:00-20:00 <br>højgårdsskolen<br>
-                Tirsdag 21:00-22:00 resten af året<br>
+                <p>Mandag  (fra 1.okt til 31.marts)<br>
+                kl.19:00-20:00 <br>højgårdsskolen<br>
+                Tirsdag 21:00-22:00 resten af året i
             alpihallerne,hal 3</p>
+            <img src="images/Facebook.png" alt="facebook">
         </div>
-    </form>
-    <form>
         <div class="box-volleyball">
                 <img src="images/volleyballlille.png" alt="Volleyball">
-                <h2>Volley</h2>
-                <p>Hver onsdag</p>
-                <p>kl.18:00-20:00 <br>
+                <h2>Volleyball</h2>
+                <p>Hver onsdag <br>
+                kl.18:00-20:00 <br>
             alpihallerne,hal 3 <br>Opstart 3.september 2023</p>
+            <img src="images/Facebook.png" alt="facebook">
         </div>
-    </form>
-    <form>
         <div class="box-motion">
                 <img src="images/motionlille.png" alt="Motion">
                 <h2>Motion</h2>
-                <p>Hver onsdag</p>
-                <p>kl.18:00-20:00 <br>
-            alpihallerne,hal 3 <br>Opstart 3.september 2023</p>
+                <p>Hver mandag, onsdag og fredag<br>
+                kl.08:00-10:00 <br>
+                I fitness centret</p>
+            <img src="images/Facebook.png" alt="facebook">
         </div>
-    </form>
-    <form>
         <div class="box-løb">
                 <img src="images/Løblille.png" alt="Løb">
                 <h2>Løb</h2>
-                <p>Hver onsdag</p>
-                <p>kl.18:00-20:00 <br>
-            alpihallerne,hal 3 <br>Opstart 3.september 2023</p>
+                <p>Hver søndag
+                kl.10:00 <br>
+                vi mødes i omklædningsrummet under Hal 2<p>
+            <img src="images/Facebook.png" alt="facebook">
         </div>
-    </form>
->>>>>>> Stashed changes
-
-<footer>
+</div>
+  
+  <footer>
   <ul>
     <li><a href="privat.html">Privatlivspolitik</a></li><br> 
     <li><a href="vedtægter.html">Vedtægter</a></li><br>
