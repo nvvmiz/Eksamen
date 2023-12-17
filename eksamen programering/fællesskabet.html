@@ -10,13 +10,14 @@
   <title>LOB</title>
   <!--Link til css style sheet-->
   <link rel="stylesheet" href="style.css">
+  <!--Link til Hamburger menuen - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
   <meta name="robots" content="noindex">
   <!-- dette er vores tekst font-->
   <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
+  <!--<style>
     /*Div. gallery style er den boks, som omfanger vores images og tekst. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
     div.gallery {
     border: none;
@@ -156,23 +157,70 @@
       text-decoration: none;
       cursor: pointer;
     }
-  </style>
+  </style>-->
 </head>
-
 <body>
-  <!-- <div class="lob">Lind Old Boys</div>-->
-   <div class="navigation" id="myNavigation">
-       <div class="logo">
-       <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
-     </div> 
-       <a href="fællesskabet.html">Fællesskabet</a>
-       <a href="Sport.html">Sport</a>
-       <a href="kontakt.html">Kontakt</a>
-       <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
-       <i class="fa fa-bars"></i>
+    <!-- Div class navigation og id=mynavigation er vores navigation bar, hvor div navigation omfatter hele containeren af information,
+     og mynavigation er det som connecter til vores javascript. https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
+     <div class="navigation" id="myNavigation">
+       <!--Div class logo er LOB logo'et, som er inkluderet i vores navigationbar, som vi har lagt ovenpå vores navigationbarcontainer med noget CSS styling bl.a. z-index.
+       Vi har derudover gjort logo'et interaktivt, således brugeren kan bevæge sig tilbage gennem alle siderne ved at trykke på logo'et. Slutteligt er der taget hensyn til accessibility-->
+         <div class="logo">
+         <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
+       </div> 
+         <a href="fællesskabet.html">Fællesskabet</a>
+         <a href="Sport.html">Sport</a>
+         <a href="kontakt.html">Kontakt</a>
+         <!--Javascript er til for at få vores navigationsbar til at udvide sig og lukke sig, når brugeren befinder sig på en skærmstørrelse
+           på max 700 px eller derunder. Og  fa fa-bars er vores hamburgermenu, som useren kan se og klikke på, når skærmstørrelsen er på max 700 px eller derunder.-->
+         <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+         <i class="fa fa-bars"></i>
+   </div>
+   
+ <!-- Denne knap er lavet ved hjælp af W3 schools (link i slutningen af linjen). Knappen bliver brugt som vores tilmeldingsknap til Lind Old Boys. 
+   Den har en class, fordi den er blevet stylet. Onclick=openform er det javascript, som er blevet brugt til at få formen til at åbne sig, når brugeren klikker på knappen.
+   https://www.w3schools.com/howto/howto_js_popup_form.asp-->
+ <button class="open-button" onclick="openForm()">Tilmeld dig</button>
+ 
+ <!-- Denne class=form-popup og id=myform er tilknyttet til knappen foroven. Dette er hvad der fremvises for brugeren, når han har klikket på knappen foroven. 
+   Der vil her poppe en container frem, som beskriver hvordan brugeren kan indsætte sine personlige oplysninger for at tilmelde sig, 
+   her med navn, email og telefonnummer. https://www.w3schools.com/howto/howto_js_popup_form.asp-->
+ <div class="form-popup" id="myForm">
+   <!--action_page.php - der er ikke tilknyttet nogen php fil, så det vil sige, at pt. vil den data, der bliver indført i formen, ikke vil blive sendt nogle steder. 
+   Derfor er vores form ikke fuldt interaktivt, da vi ikke har. https://www.w3schools.com/php/php_forms.asp-->
+   <form action="/action_page.php" class="form-container">
+     <label for="name"><b>Fulde Navn</b></label>
+     <input type="text" placeholder="Fulde Navn" name="name" required>
+     <label for="email"><b>Email</b></label>
+     <input type="text" placeholder="Email adresse" name="email" required>
+     <label for="Tlfnumber"><b>Tlf. nr.</b></label>
+     <input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
+     <!--Fordi LOB tilbyder forskellige aktiviteter, som mulige foreningsmedlemmer kan tilmelde sig til, er der blevet tiføjet en dropdown menu,
+     hvor brugeren kan vælge hvilken aktivitet han ønsker, at deltage i. https://www.w3schools.com/tags/att_value.asp-->
+     <label for="valgmulighed">Aktiviteter</label>
+     <select id="valgmulighed" name="valgmulighed">
+       <option value="hyggerne">Hyggerne</option>
+       <option value="fodbold 28+">Fodbold 28+</option>
+       <option value="fodbold 40+">Fodbold 40+</option>
+       <option value="badminton">Badminton</option>
+       <option value="volley">Volleyball</option>
+       <option value="motion">Motion</option>
+       <option value="gaa">Løb/Gå</option>
+     </select>
+    <!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
+ 
+    <!-- De to knapper er tilknyttet til selve tilmeldingsformularen, således brugeren kan vælge at lukke formularen, hvis brugeren ikke ønsker at fortsætte 
+     med at tilmelde sig ellers er det knappen Tilmeld mig, således brugeren kan vælge at indsende sin oplysninger og ønske om tilmelding.
+     Onclick=closeform er  javascript, som er blevet brugt til at få formularen til at lukke sig, når brugeren klikker på knappen.
+   https://www.w3schools.com/howto/howto_js_popup_form.asp-->
+     <button type="submit" class="btn">Tilmeld mig</button>
+     <button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
+   </form>
  </div>
 
-  <p class="soctitel">Om os</p>
+
+<!---->
+ <p class="soctitel">Om os</p>
   <div style="padding-left:10px;">
   <p class="tekst">Foreningens lokale, <strong>LOBbyen,</strong> er beliggende i kælderen under hal 2 i Alpi Hallerne.
   </p>
@@ -409,69 +457,50 @@
 
   <div class="clearfix"></div>
 
-  <!-- A button to open the popup form https://www.w3schools.com/howto/howto_js_popup_form.asp-->
-  <button class="open-button" onclick="openForm()">Tilmeld dig</button>
-
-  <!-- The form -->
-  <div class="form-popup" id="myForm">
-    <form action="/action_page.php" class="form-container">
-      <label for="name"><b>Fulde Navn</b></label>
-      <input type="text" placeholder="Fulde Navn" name="name" required>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Email adresse" name="email" required>
-      <label for="Tlfnumber"><b>Tlf. nr.</b></label>
-      <input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
-      <label for="valgmulighed">Aktiviteter</label>
-      <select id="valgmulighed" name="valgmulighed">
-        <option value="hyggerne">Hyggerne</option>
-        <option value="fodbold 28+">Fodbold 28+</option>
-        <option value="fodbold 40+">Fodbold 40+</option>
-        <option value="badminton">Badminton</option>
-        <option value="volley">Volleyball</option>
-        <option value="motion">Motion</option>
-        <option value="gaa">Løb/Gå</option>
-      </select>
-      <!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
-
-      <button type="submit" class="btn">Tilmeld mig</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
-    </form>
-  </div>
 
 
-  <footer>
-    <ul>
-      <li><a href="privat.html">Privatlivspolitik</a></li><br>
+
+<!--Her vores footer, som er blevet stylet i CSS style, som indeholder en uordered liste format og li, som er blevet stylet i vores CSS style. 
+Vi har valgt derudover også links til andre sider af hjemmesiden LOB, som deres privatlivspolitik og LOB's (regler og vilkår) vedtægter. 
+Ligeledes har vi også deres links til andre foreninger fremvist i vores footer, og disse er selvfølgelig også linket, 
+så det er muligt for brugeren at besøge disse andre foreninger mm. De er blevet lavet, således at brugeren åbner et nyt fanevindue, så brugeren ikke bevæger sig væk fra LOBs hjemmeside.https://www.w3schools.com/html/html_links.asp-->
+<footer>
+  <ul>
+      <li><a href="privat.html">Privatlivspolitik</a></li><br> 
       <li><a href="vedtægter.html">Vedtægter</a></li><br>
       <li>Andre foreninger:</li>
-      <li>lindoldgirls.dk | lindborger.dk | alpihallerne.dk | desmaaklinger.dk</li>
+      <li><a href="https://www.lindoldgirls.dk/"target="_blank">lindoldgirls.dk | <a href="http://www.lindborger.dk/"target="_blank">lindborger.dk | <a href="https://alpihallerne.dk/"target="_blank"> alpihallerne.dk | <a href="https://desmaaklinger.dk/"target="_blank">desmaaklinger.dk</a></li>
       <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
-    </ul>
+  </ul>
   </footer>
-
+  
+  <!--NAVIGATIONSBAR: Her er der blevet gjort brug javascript til vores navigationbar hamburgermenu, således at den fungerer med at udvide sig og lukke sig, når brugeren interager med hamburgeren.
+    Den korresponderer med CSS stylen, og den media query, der er blevet pålagt. Så når navigation modtager navigation og responsive, 
+    skal navigationen fremvise en hamburgermenu og give brugeren mulighed for at åbne og lukke, og hvis den ikke modtager disse requests, så skal den bare fremvise navigationen med fulde links osv. 
+  https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  -->
   <script>
-    function myFunction() {
-      var x = document.getElementById("myNavigation");
-      if (x.className === "navigation") {
-        x.className += " responsive";
-      } else {
-        x.className = "navigation";
-      }
+  function myFunction() {
+    var x = document.getElementById("myNavigation");
+    if (x.className === "navigation") {
+      x.className += " responsive";
+    } else {
+      x.className = "navigation";
     }
-  </script>
-  <script>
-    /*https://www.w3schools.com/howto/howto_js_popup_form.asp*/
+  }
+    /*TILMELDINGSFORMULAREN: For at kunne få tilmeldingsformularen til at respondere med at åbne og lukke sig, så har vi været nødsaget til at bruge javascript, 
+    som er hentet her https://www.w3schools.com/howto/howto_js_popup_form.asp
+    Så når der bliver modtaget et request på, at formen skal åbne sig, så åbner den sig, og hvis brugeren klikker på luk, 
+    så kommer der et nyt request og formen bliver lukket.*/
     function openForm() {
       document.getElementById("myForm").style.display = "block";
     }
-
+    
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
     }
-  </script>
 
 
-  <script>
+
     // Get the modal - For Dart Konkurrence 
     var modal1 = document.getElementById("myModal");
 
@@ -497,8 +526,7 @@
         modal1.style.display = "none";
       }
     }
-  </script>
-  <script>
+
     // Get the modal - For referat Konkurrence 
     var modal2 = document.getElementById("ModalG");
 
@@ -514,7 +542,7 @@
     }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
+    span2.onclick = function () {
       modal2.style.display = "none";
     }
 
@@ -524,8 +552,8 @@
         modal2.style.display = "none";
       }
     }  
-  </script>
-  <script>
+
+
     // Get the modal - For Bowling 
     var modal3 = document.getElementById("ModalBo");
 
@@ -551,8 +579,8 @@
         modal3.style.display = "none";
       }
     }
-  </script>
-  <script>
+
+
     // Get the modal - For Grill 
     var modal4 = document.getElementById("Modalgri");
 

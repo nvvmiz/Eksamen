@@ -10,33 +10,37 @@
     <title>LOB</title>
     <!--Link til css style sheet-->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!--Link til Hamburger menuen - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
     <meta name="robots" content="noindex"> 
     <!-- dette er vores tekst font-->
     <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style> 
+      .move-right {
+      margin-left: 30px;
+  }
+      </style>
     </head>
 <body>
-   <!-- <div class="lob">Lind Old Boys</div>-->
+   <!-- Div class navigation og id=mynavigation er vores navigation bar, hvor div navigation omfatter hele containeren af information,
+    og mynavigation er det som connecter til vores javascript. https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
     <div class="navigation" id="myNavigation">
+      <!--Div class logo er LOB logo'et, som er inkluderet i vores navigationbar, som vi har lagt ovenpå vores navigationbarcontainer med noget CSS styling bl.a. z-index.
+      Vi har derudover gjort logo'et interaktivt, således brugeren kan bevæge sig tilbage gennem alle siderne ved at trykke på logo'et. Slutteligt er der taget hensyn til accessibility-->
         <div class="logo">
         <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
       </div> 
         <a href="fællesskabet.html">Fællesskabet</a>
         <a href="Sport.html">Sport</a>
         <a href="kontakt.html">Kontakt</a>
+        <!--Javascript er til for at få vores navigationsbar til at udvide sig og lukke sig, når brugeren befinder sig på en skærmstørrelse
+          på max 700 px eller derunder. Og  fa fa-bars er vores hamburgermenu, som useren kan se og klikke på, når skærmstørrelsen er på max 700 px eller derunder.-->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
         <i class="fa fa-bars"></i>
   </div>
-    <style> 
-    .move-right {
-    margin-left: 30px;
-}
-    </style>
-    </head>
-<body>
-   
+
     <div id="content" class="move-right">
       <h1>Vedtægter</h1>
       <p>
@@ -103,25 +107,34 @@
            </p>
           </div>
 
-          <footer>
-            <ul>
-              <li><a href="privat.html">Privatlivspolitik</a></li><br> 
-              <li><a href="vedtægter.html">Vedtægter</a></li><br>
-              <li>Andre foreninger:</li>
-              <li>lindoldgirls.dk | lindborger.dk | alpihallerne.dk | desmaaklinger.dk</li>
-              <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
-          </ul>
-          </footer>
-          
-          <script>
-              function myFunction() {
-                var x = document.getElementById("myNavigation");
-                if (x.className === "navigation") {
-                  x.className += " responsive";
-                } else {
-                  x.className = "navigation";
-                }
-              }
-              </script> 
-          </body>
-          </html>
+    <!--Her vores footer, som er blevet stylet i CSS style, som indeholder en uordered liste format og li, som er blevet stylet i vores CSS style. 
+Vi har valgt derudover også links til andre sider af hjemmesiden LOB, som deres privatlivspolitik og LOB's (regler og vilkår) vedtægter. 
+Ligeledes har vi også deres links til andre foreninger fremvist i vores footer, og disse er selvfølgelig også linket, 
+så det er muligt for brugeren at besøge disse andre foreninger mm. De er blevet lavet, således at brugeren åbner et nyt fanevindue, så brugeren ikke bevæger sig væk fra LOBs hjemmeside.https://www.w3schools.com/html/html_links.asp-->
+<footer>
+  <ul>
+    <li><a href="privat.html">Privatlivspolitik</a></li><br>
+    <li><a href="vedtægter.html">Vedtægter</a></li><br>
+    <li>Andre foreninger:</li>
+    <li><a href="https://www.lindoldgirls.dk/" target="_blank">lindoldgirls.dk | <a href="http://www.lindborger.dk/"target="_blank">lindborger.dk | <a href="https://alpihallerne.dk/" target="_blank"> alpihallerne.dk | <a href="https://desmaaklinger.dk/" target="_blank">desmaaklinger.dk</a></li>
+    <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
+  </ul>
+</footer>
+
+<!--NAVIGATIONSBAR: Her er der blevet gjort brug javascript til vores navigationbar hamburgermenu, således at den fungerer med at udvide sig og lukke sig, når brugeren interager med hamburgeren.
+Den korresponderer med CSS stylen, og den media query, der er blevet pålagt. Så når navigation modtager navigation og responsive, 
+skal navigationen fremvise en hamburgermenu og give brugeren mulighed for at åbne og lukke, og hvis den ikke modtager disse requests, så skal den bare fremvise navigationen med fulde links osv. 
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  -->
+<script>
+  function myFunction() {
+    var x = document.getElementById("myNavigation");
+    if (x.className === "navigation") {
+      x.className += " responsive";
+    } else {
+      x.className = "navigation";
+    }
+  }
+</script>
+
+</body>
+</html>

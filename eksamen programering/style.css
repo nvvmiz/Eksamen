@@ -2,17 +2,18 @@ body {
     background-color: #f9f6f0;
     margin: 0;
     font-family: "oswald", sans-serif;
-}    
+}
 
 /* background-color ændre farven på baggrund. color ændrer farven på tekst. display definerer elementet, som flex 
 container og hvere child element inden i er et flex element. justify-content placerer teksten til højre. 
 padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav i forhold til sidens toppen*/
 
-.tekst, .h1, .h2, .h3 {
+.tekst, h1, h2, h3, h4 {
     color: #494848;
 }
+
 .tekst {
-font-size: 16px;
+    font-size: 16px;
 
 }
 
@@ -25,14 +26,15 @@ font-size: 16px;
     text-decoration: none;
     font-size: 24px;
     z-index: 5;  
-{*/ 
+{*/
 
 .navigation {
     background-color: #2b4257;
     overflow: hidden;
     color: #ffffff;
 
-} 
+}
+
 .navigation a {
     float: left;
     display: block;
@@ -43,15 +45,19 @@ font-size: 16px;
     justify-content: center;
     font-weight: normal;
     position: sticky;
-}    
+}
+
 .navigation a:hover {
     text-decoration: underline;
 
 }
-.navigation a:link, .navigation a:visited {
+
+.navigation a:link,
+.navigation a:visited {
     color: #ffffff;
-    text-decoration: none;    
+    text-decoration: none;
 }
+
 .navigation a.icon {
     display: contents;
 
@@ -60,12 +66,19 @@ font-size: 16px;
 a.hover {
     text-decoration: underline;
 }
-a:link, a:visited {
+
+a:link,
+a:visited {
     color: #ffffff;
-    text-decoration: none;   
+    text-decoration: none;
 }
+
 @media only screen and (min-width: 701px) {
-.fa.fa-bars, .icon {display: none;}
+
+    .fa.fa-bars,
+    .icon {
+        display: none;
+    }
 }
 
 /* margin-left placerer logoet i venstre side af skærmen. position sticky sørger for at logoet følger navigationsbar
@@ -76,30 +89,33 @@ z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til t
     position: sticky;
     top: 1px;
     display: block;
-}      */ 
+}      */
 .logo a img {
-        display: flex;
-    }
-.logo a {
-padding: 0;
-margin-right: 55%;
-margin-left: 4%;
+    display: flex;
 }
-    
+
+.logo a {
+    padding: 0;
+    margin-right: 55%;
+    margin-left: 4%;
+}
+
 .mySlides {
     margin-top: 50px;
     margin-left: 2.8%;
     margin-right: 1.5%;
 }
+
 .w3-left {
-margin-left: 20%;
-cursor:pointer;
-display:inline-block; 
+    margin-left: 20%;
+    cursor: pointer;
+    display: inline-block;
 }
+
 .w3-right {
     margin-right: 8%;
     margin-left: 62%;
-    cursor:pointer;
+    cursor: pointer;
     display: inline-block;
 }
 
@@ -110,8 +126,10 @@ display:inline-block;
 .move-front {
     margin-left: 35px;
 }
+
 /*https://www.w3schools.com/csS/css3_buttons.asp*/
-.bluebutton1, .bluebutton2 {
+.bluebutton1,
+.bluebutton2 {
     background-color: #2b4257;
     border: none;
     color: white;
@@ -128,44 +146,49 @@ display:inline-block;
     display: inline;
     margin-left: 10%;
 }
+
 /*Skjuler de to blå CTA'er, når skærmer er på minimum 900 px.*/
 @media screen and (min-width: 900px) {
-.frontbuttons {display: none;}
-  }
+    .frontbuttons {
+        display: none;
+    }
+}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  background-color: #FBB80F;
-  padding:16px 20px;
-  border:none;
-  cursor: pointer;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 145px;
-  font-weight: bold;
-  font-size: 18px;
-  color: #494848;
+    background-color: #FBB80F;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 145px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #494848;
 }
 
 /* The popup form - hidden by default */
 .form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #E39603;
-  z-index: 9;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #E39603;
+    z-index: 9;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color:#E39603;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #E39603;
 }
 
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: none;
@@ -185,36 +208,240 @@ input[type=text], select, textarea {
 
 /* When the inputs get focus, do something*/
 .form-container input[type=text]:focus {
-  background-color: #F0EEEE;
-  outline: none;
-} 
+    background-color: #F0EEEE;
+    outline: none;
+}
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #FBB80F;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  color: #494848;
-  font-weight: bold;
-  font-size: 16px;
+    background-color: #FBB80F;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    color: #494848;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: #FBB80F;
-  font-size: 16px;
-  color: #494848;
-  font-weight: bold;
+    background-color: #FBB80F;
+    font-size: 16px;
+    color: #494848;
+    font-weight: bold;
 }
 
 /* Add some hover effects to buttons 
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }*/
+
+/*Div. gallery style er den boks, som omfanger vores images og tekst. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
+div.gallery {
+    border: none;
+    margin-top: 5px;
+}
+
+/*div.gallery:hover {
+           border: 1px solid #777;
+          }*/
+/* div.gallery img er det størrelsesforhold vores billede skal have. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+/*.desc er den lille boks, som indeholder vores tekstbeskrivelser, som er placeret under billedet.Vi har bl.a. lagt den samme farve på, som vores nav.
+        Derudover har vi givet den padding, så der er luft mellem teksten og kanten til boksen. Vi har brugt text-align til at centre vores tekst, og givet den en font-size.  https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
+.desc {
+    padding: 15px;
+    text-align: center;
+    background-color: #2b4257;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+}
+
+/*.desc:hover er en "animeret" indikation ved hjælp af CSS på vores tekstboks. Vi har en border på 1px, som er farvet i en mørkebrun farve, således det ligner at boksen har en animation, når brugeren kører musen henover feltet.  https://www.w3schools.com/howto/howto_css_image_gallery.asp */
+.desc:hover {
+    border: 1px solid #777;
+
+}
+
+/*.soctitel er styling på bestemte overskrifter på vores side. Vi har givet den noget margin-bottom og margin-top, således der er noget space
+       mellem vores navigationbar samt vores elementer placeret under overskrifterne.Derudover er der angivet en font-size, farve og vægt.*/
+.soctitel {
+    margin-bottom: 15px;
+    margin-top: 18px;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #494848;
+    font-weight: bold;
+}
+
+/**/
+* {
+    box-sizing: border-box;
+}
+
+/*.Responsive er den klasse, som vi har rundt om vores div.gallery. Responsive flytter på elementerne,
+       således, at vores boks https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+/*Media only screen - max-width 700px, angiver hvilken størrelse boksen skal have, når de fremvises på en skærm op til 700 px. https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+/*Media only screen - max-width 500px, angiver hvilken størrelse boksen skal have, når de fremvises på en skærm op til 700 px. https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+/* https://www.w3schools.com/howto/howto_css_clearfix.asp*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fontklub {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+.signature {
+    width: 20%;
+    height: auto;
+}
+
+/* The Modal (background) */
+.modal,
+.modalbow,
+.modalgril,
+.modalG {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content,
+.referat-content,
+.bowling-content,
+.grill-content {
+    background-color: #F9F6F0;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 3px solid #2b4257;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    /* hver sport har sin egen box. */
+    /* margin right: Er kun her i box-fodbold fordi den blev ved med at hænge fast på badminton.
+     Efter mange forsøg med alt muligt blev det her løsningen */
+.box-badminton, .box-volleyball, .box-motion, .box-løb {
+    background-color: #2b4257;
+    padding: 10px;
+    color: #fff;
+    /*width: 550px;*/
+    /*height: 400px;*/
+    width: 350px;
+    height: 477px;
+    margin-block: 20px;
+}
+    .box-fodbold {
+        background-color: #2b4257;
+        padding: 10px;
+        color: #fff;
+        /*width: 550px;*/
+        /*height: 400px;*/
+        width: 350px;
+        height: 477px;
+        margin-block: 20px;
+        margin-right: 30px;    
+}
+
+/* Row indsættes for at få boxene til at tilpasse sig skærmstørrelserne.
+ og boxene ligger sig under hinanden ved mobil størrelsen*/
+ .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+  }
+  
+  /* skaber ens columns ( her navngivet box- fodb.... osv for hvert element)
+  der er ingen padding fordi det gav rod i tekst og billeder i boxene.*/
+  .box.fodbold,.box-badminton,.box-volleyball,.box-motion,.box-løb {
+    flex: fixed;
+    margin-right: 30px;
+  }
+  
+  /* på skærme der er 992px wide eller mindre, går fra 3 collums til  */
+  @media screen and (max-width: 992px) {
+   .box-fodbold, .box-badminton, .box-volleyball, .box-motion, .box-løb {
+    width: 100%;
+    margin: 6px 0;
+    }
+  }
+  
+  /* på skærme der er 600px wide or less, få columns stakke sig over hinanden og ikke ved siden af hinanden */
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+      padding:20px;
+      margin-right: 20px;
+    }
+}
 
 footer {
     background-color: #2b4257;
@@ -227,41 +454,50 @@ footer {
     text-align: left;
 
 }
-        
+
 footer ul {
     list-style-type: none;
 }
+
 /*Vi havde problemer med at vores footer og pop-up tilmeldningsknap gav et gap i vores footer, når skærmsstørrelsen var mindre end 700px. Vi fik hjælp af ChatGPT til at finde problemet: https://chat.openai.com/share/5287e549-4caa-4901-ab90-858af1efbe7f*/
 @media screen and (max-width: 700px) {
     footer {
-    margin-top: 20%;
-}         
+        margin-top: 20%;
+    }
 }
 
 /* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 700px) {
-    .navigation a:not(:first-child) {display: none;}
-    .navigation a.icon, .fa.fa-bars {
-      float: right;
-      display: block;
-      font-size: 30px;
+    .navigation a:not(:first-child) {
+        display: none;
     }
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 700px) {
-    .navigation.responsive {position: relative;}
-    .navigation.responsive a.icon, .fa.fa-bars {
-      position: absolute;
-      right: 0;
-      top: 2.5%;
-      left: 93%;
+
+    .navigation a.icon,
+    .fa.fa-bars {
+        float: right;
+        display: block;
+        font-size: 30px;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 700px) {
+    .navigation.responsive {
+        position: relative;
+    }
+
+    .navigation.responsive a.icon,
+    .fa.fa-bars {
+        position: absolute;
+        right: 0;
+        top: 2.5%;
+        left: 93%;
 
     }
+
     .navigation.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+        float: none;
+        display: block;
+        text-align: left;
     }
-  }
-  
+}

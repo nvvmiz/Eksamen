@@ -10,6 +10,7 @@
     <title>LOB</title>
     <!--Link til css style sheet-->
     <link rel="stylesheet" href="style.css">
+     <!--Link til Hamburger menuen - https://www.w3schools.com/howto/howto_js_mobile_navbar.asp-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
     <meta name="robots" content="noindex"> 
@@ -18,23 +19,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 <body>
-   <!-- <div class="lob">Lind Old Boys</div>-->
+   <!-- Div class navigation og id=mynavigation er vores navigation bar, hvor div navigation omfatter hele containeren af information,
+    og mynavigation er det som connecter til vores javascript. https://www.w3schools.com/howto/howto_js_mobile_navbar.asp -->
     <div class="navigation" id="myNavigation">
+      <!--Div class logo er LOB logo'et, som er inkluderet i vores navigationbar, som vi har lagt ovenpå vores navigationbarcontainer med noget CSS styling bl.a. z-index.
+      Vi har derudover gjort logo'et interaktivt, således brugeren kan bevæge sig tilbage gennem alle siderne ved at trykke på logo'et. Slutteligt er der taget hensyn til accessibility-->
         <div class="logo">
         <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
       </div> 
         <a href="fællesskabet.html">Fællesskabet</a>
         <a href="Sport.html">Sport</a>
         <a href="kontakt.html">Kontakt</a>
+        <!--Javascript er til for at få vores navigationsbar til at udvide sig og lukke sig, når brugeren befinder sig på en skærmstørrelse
+          på max 700 px eller derunder. Og  fa fa-bars er vores hamburgermenu, som useren kan se og klikke på, når skærmstørrelsen er på max 700 px eller derunder.-->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
         <i class="fa fa-bars"></i>
   </div>
   
-<!-- A button to open the popup form https://www.w3schools.com/howto/howto_js_popup_form.asp-->
+<!-- Denne knap er lavet ved hjælp af W3 schools (link i slutningen af linjen). Knappen bliver brugt som vores tilmeldingsknap til Lind Old Boys. 
+  Den har en class, fordi den er blevet stylet. Onclick=openform er det javascript, som er blevet brugt til at få formen til at åbne sig, når brugeren klikker på knappen.
+  https://www.w3schools.com/howto/howto_js_popup_form.asp-->
 <button class="open-button" onclick="openForm()">Tilmeld dig</button>
 
-<!-- The form -->
+<!-- Denne class=form-popup og id=myform er tilknyttet til knappen foroven. Dette er hvad der fremvises for brugeren, når han har klikket på knappen foroven. 
+  Der vil her poppe en container frem, som beskriver hvordan brugeren kan indsætte sine personlige oplysninger for at tilmelde sig, 
+  her med navn, email og telefonnummer. https://www.w3schools.com/howto/howto_js_popup_form.asp-->
 <div class="form-popup" id="myForm">
+  <!--action_page.php - der er ikke tilknyttet nogen php fil, så det vil sige, at pt. vil den data, der bliver indført i formen, ikke vil blive sendt nogle steder. 
+  Derfor er vores form ikke fuldt interaktivt, da vi ikke har. https://www.w3schools.com/php/php_forms.asp-->
   <form action="/action_page.php" class="form-container">
     <label for="name"><b>Fulde Navn</b></label>
     <input type="text" placeholder="Fulde Navn" name="name" required>
@@ -42,6 +54,8 @@
     <input type="text" placeholder="Email adresse" name="email" required>
     <label for="Tlfnumber"><b>Tlf. nr.</b></label>
     <input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
+    <!--Fordi LOB tilbyder forskellige aktiviteter, som mulige foreningsmedlemmer kan tilmelde sig til, er der blevet tiføjet en dropdown menu,
+    hvor brugeren kan vælge hvilken aktivitet han ønsker, at deltage i. https://www.w3schools.com/tags/att_value.asp-->
     <label for="valgmulighed">Aktiviteter</label>
     <select id="valgmulighed" name="valgmulighed">
       <option value="hyggerne">Hyggerne</option>
@@ -54,13 +68,20 @@
     </select>
    <!--<p>Hvis man kun ønsker tilmelding til LOBbyen, så vælg 'Hyggerne'. Medlemskab til LOBbyen er inkluderet ved tilvalg af en sportsaktivitet. </p>-->
 
+   <!-- De to knapper er tilknyttet til selve tilmeldingsformularen, således brugeren kan vælge at lukke formularen, hvis brugeren ikke ønsker at fortsætte 
+    med at tilmelde sig ellers er det knappen Tilmeld mig, således brugeren kan vælge at indsende sin oplysninger og ønske om tilmelding.
+    Onclick=closeform er  javascript, som er blevet brugt til at få formularen til at lukke sig, når brugeren klikker på knappen.
+  https://www.w3schools.com/howto/howto_js_popup_form.asp-->
     <button type="submit" class="btn">Tilmeld mig</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Luk</button>
   </form>
 </div>
 
 
-    <!--https://www.w3schools.com/w3css/w3css_slideshow.asp & https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_dots2-->
+    <!--Vores Image Gallery er blevet bygget ved hjælp af W3 schools slideshows Indicators https://www.w3schools.com/w3css/w3css_slideshow.asp
+    Vi en class w3-content w3-display-container, som er den container som omfanger det hele, og som er blevet stylet noget margin-top i vores CSS.
+  Derudover har vi vores class mySlides, som ligeledes er blevet stylet i CSS. Der er adskillige slides, fordi vi har et billedegallery, 
+  som skal vise flere billeder end ét. Her har vi i vores HTML også lavet noget style i form af at angive bredden og højden på vores valgte billeder.-->
       <div class="w3-content w3-display-container" style="width: 97%; height:50%">
         <img class="mySlides" src="images/beer.png" style="width:97%; height:50%">
         <img class="mySlides" src="images/fodbold.png" style="width:97%; height:50%">
@@ -68,28 +89,39 @@
         <img class="mySlides" src="images/volley.png" style="width:97%; height:50%">
         <img class="mySlides" src="images/bar.png" style="width:97%; height:50%">
       </div>
+
       <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+        <!--Her har vi vores to pile, som er fremvist på forsiden under billedegalleriet. Der er her også blevet brugt javascript til at angive
+        hvordan billedet skal flytte sig og fremvise det næste billede angivet i rækken foroven (mySlides). Disse pile er ligeledes blevet stylet
+        med CSS, og har fået en bestemt position på forsiden. https://www.w3schools.com/w3css/w3css_slideshow.asp -->
         <span class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094; </span>
         <span class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095; </span> 
       </div>
+      <!--Her er vores tekst på forsiden. Vi har to classes brugt her. Den første move-front er en div, som bliver brugt som en container, som vi har stylet i CSS style. 
+      I dette tilfælde er den brugt, således at den flytter alt det indhold, som er under denne div ind på forsiden med noget margin. 
+      Derudover har vi også lavet en class tekst, som bliver brugt i dette tilfælde med tagget p.-->
       <div class="move-front">
-        <h1 class="h1">Lind Old Boys</h1>
+        <h1>Lind Old Boys</h1>
         <p class="tekst">Hold dig “sund” i et hyggeligt foreningsfælleskab for mænd.</p>
         <p class="tekst">Lind Old Boys – ”gentleman-klubben” for alle i Lind og omegn på 28+. Klubben blev dannet i Lind 7. maj 1969 og har i dag over 100 medlemmer, men kan sagtens rumme flere.</p>
       </div>
+      <!--Her har vi en div, som omkapsler vores to CTA'er. Div frontbuttons er blevet stylet i vores CSS style, og ligeledes er vores button classes også. 
+      Derudover har vi gjort dem "interaktive", således brugeren lander på en ny side, når han klikker på CTA'erne.https://www.w3schools.com/tags/tag_button.asp-->
       <div class="frontbuttons">
       <button class="bluebutton1" type="button"><a href="fællesskabet.html">Fællesskabet</a></button>
       <button class="bluebutton2" type="button"><a href="Sport.html">Sport</a></button></div>
     
 
 
-
+<!--Her vores footer, som er blevet stylet i CSS style, som indeholder en uordered liste format og li, som er blevet stylet i vores CSS style. 
+Vi har valgt derudover også links til andre sider af hjemmesiden LOB, som deres privatlivspolitik og LOB's (regler og vilkår) vedtægter. 
+Ligeledes har vi også deres links til andre foreninger fremvist i vores footer, og disse er selvfølgelig også linket, så det er muligt for brugeren at besøge disse.-->
 <footer>
-  <ul>
+<ul>
     <li><a href="privat.html">Privatlivspolitik</a></li><br> 
     <li><a href="vedtægter.html">Vedtægter</a></li><br>
     <li>Andre foreninger:</li>
-    <li>lindoldgirls.dk | lindborger.dk | alpihallerne.dk | desmaaklinger.dk</li>
+    <li><a href="https://www.lindoldgirls.dk/"target="_blank">lindoldgirls.dk | <a href="http://www.lindborger.dk/"target="_blank">lindborger.dk | <a href="https://alpihallerne.dk/"target="_blank"> alpihallerne.dk | <a href="https://desmaaklinger.dk/"target="_blank">desmaaklinger.dk</a></li>
     <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
 </ul>
 </footer>
