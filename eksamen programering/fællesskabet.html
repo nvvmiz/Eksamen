@@ -13,151 +13,11 @@
   <!--Link til Hamburger menuen - https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
-  <meta name="robots" content="noindex">
   <!-- dette er vores tekst font-->
-  <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
+ <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet" type="test/css">
+  <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<style>
-    /*Div. gallery style er den boks, som omfanger vores images og tekst. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
-    div.gallery {
-    border: none;
-    margin-top: 5px;
-  } 
 
-    /*div.gallery:hover {
-       border: 1px solid #777;
-      }*/
-    /* div.gallery img er det størrelsesforhold vores billede skal have. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
-    div.gallery img {
-      width: 100%;
-      height: auto;
-    }
-    /*.desc er den lille boks, som indeholder vores tekstbeskrivelser, som er placeret under billedet.Vi har bl.a. lagt den samme farve på, som vores nav.
-    Derudover har vi givet den padding, så der er luft mellem teksten og kanten til boksen. Vi har brugt text-align til at centre vores tekst, og givet den en font-size.  https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
-    .desc {
-      padding: 15px;
-      text-align: center;
-      background-color: #2b4257;
-      color: #fff;
-      font-size: 16px;
-      width: 100%;
-      border: none;
-    }
-    /*.desc:hover er en "animeret" indikation ved hjælp af CSS på vores tekstboks. Vi har en border på 1px, som er farvet i en mørkebrun farve, således det ligner at boksen har en animation, når brugeren kører musen henover feltet.  https://www.w3schools.com/howto/howto_css_image_gallery.asp */
-    .desc:hover {
-      border: 1px solid #777;
-
-    }
-   /*.soctitel er styling på bestemte overskrifter på vores side. Vi har givet den noget margin-bottom og margin-top, således der er noget space
-   mellem vores navigationbar samt vores elementer placeret under overskrifterne.Derudover er der angivet en font-size, farve og vægt.*/
-    .soctitel {
-      margin-bottom: 15px;
-      margin-top: 18px;
-      font-size: 20px;
-      margin-left: 10px;
-      color: #494848;
-      font-weight: bold;
-    }
-
-    /**/
-    * {
-      box-sizing: border-box;
-    }
-   /*.Responsive er den klasse, som vi har rundt om vores div.gallery. Responsive flytter på elementerne,
-   således, at vores boks https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
-    .responsive {
-      padding: 0 6px;
-      float: left;
-      width: 24.99999%;
-    }
-  /*Media only screen - max-width 700px, angiver hvilken størrelse boksen skal have, når de fremvises på en skærm op til 700 px. https://www.w3schools.com/howto/howto_css_image_gallery.asp*/ 
-    @media only screen and (max-width: 700px) {
-      .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-      }
-    }
-    /*Media only screen - max-width 500px, angiver hvilken størrelse boksen skal have, når de fremvises på en skærm op til 700 px. https://www.w3schools.com/howto/howto_css_image_gallery.asp*/ 
-    @media only screen and (max-width: 500px) {
-      .responsive {
-        width: 100%;
-      }
-    }
-  /* https://www.w3schools.com/howto/howto_css_clearfix.asp*/
-    .clearfix:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    .fontklub {
-      text-decoration: underline;
-      font-weight: bold;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .signature {
-      width: 20%;
-      height: auto;
-    }
-
-    /* The Modal (background) */
-    .modal,
-    .modalbow,
-    .modalgril,
-    .modalG {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      /* Stay in place */
-      z-index: 1;
-      /* Sit on top */
-      left: 0;
-      top: 0;
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: rgb(0, 0, 0);
-      /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.4);
-      /* Black w/ opacity */
-    }
-
-    /* Modal Content/Box */
-    .modal-content,
-    .referat-content,
-    .bowling-content,
-    .grill-content {
-      background-color: #F9F6F0;
-      margin: 15% auto;
-      /* 15% from the top and centered */
-      padding: 20px;
-      border: 3px solid #2b4257;
-      width: 80%;
-      /* Could be more or less, depending on screen size */
-    }
-
-    /* The Close Button */
-    .close {
-      color: #000;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  </style>-->
 </head>
 <body>
     <!-- Div class navigation og id=mynavigation er vores navigation bar, hvor div navigation omfatter hele containeren af information,
@@ -168,7 +28,7 @@
          <div class="logo">
          <a href="index.html"><img src="images/logo.png" alt="logo for Lind old boys"></a>
        </div> 
-         <a href="fællesskabet.html">Fællesskabet</a>
+       <a href="fællesskabet.html"><strong>Fællesskabet</a></strong>
          <a href="Sport.html">Sport</a>
          <a href="kontakt.html">Kontakt</a>
          <!--Javascript er til for at få vores navigationsbar til at udvide sig og lukke sig, når brugeren befinder sig på en skærmstørrelse
@@ -219,55 +79,101 @@
  </div>
 
 
-<!---->
- <p class="soctitel">Om os</p>
-  <div style="padding-left:10px;">
-  <p class="tekst">Foreningens lokale, <strong>LOBbyen,</strong> er beliggende i kælderen under hal 2 i Alpi Hallerne.
+<!-- Her har vi en div med en class rundt om vores content på fællesskabssiden. Under styles er denne blevet stylet. Derudover er der en class til at style P tags. -->
+<div class="soctitel">
+ <h1>Om Lind Old Boys</h1>
+ <div class="tekst">
+  <p>Foreningens lokale, <strong>LOBbyen,</strong> er beliggende i kælderen under hal 2 i Alpi Hallerne.
   </p>
-  <p class="tekst">Du behøver aldrig kede dig, hvis du bliver medlem af LOB, hvor vi kommer hinanden ved og mødes til
+  <p>Du behøver aldrig kede dig, hvis du bliver medlem af LOB, hvor vi kommer hinanden ved og mødes til
       klubtræf onsdag aften og lørdag formiddag eller når vi, i samlet flok besætter en del af Faxe Kondi tribunen på
       MCH Arena.</p>
-<p class="tekst"><strong>LOBbyen er til fællesskabet, og bruges:</strong></p>
+<p><strong>LOBbyen er til fællesskabet, og bruges:</strong></p>
     <ul>
-      <li class="tekst">Hver <strong>onsdag</strong> fra kl. 19:30 til kl. 21:30 er LOBbyen åben, hvor der er mulighed
+      <li>Hver <strong>onsdag</strong> fra kl. 19:30 til kl. 21:30 er LOBbyen åben, hvor der er mulighed
         for hyggeligt samvær med f.eks. et spil pool eller se fodboldkampe i TV’et.</li>
-      <li class="tekst">Hver <strong>lørdag</strong> fra kl. 11:00 til kl. 13:00 er LOBbyen ligeledes åbent for at få en
+      <li>Hver <strong>lørdag</strong> fra kl. 11:00 til kl. 13:00 er LOBbyen ligeledes åbent for at få en
         hyggelig sludder og et spil pool.</li>
-      <li class="tekst">Hver <strong>søndag</strong> formiddag efter løbeturen til en kop kaffe, vand eller øl.</li>
-      <li class="tekst">Og efter <strong>alle</strong> fodbold <strong>hjemmekampe</strong> til en kop kaffe, vand eller
+      <li>Hver <strong>søndag</strong> formiddag efter løbeturen til en kop kaffe, vand eller øl.</li>
+      <li>Og efter <strong>alle</strong> fodbold <strong>hjemmekampe</strong> til en kop kaffe, vand eller
         øl.</li>
     </ul>
   </div>
-
-  <p class="soctitel">Arrangementer & opdateringer</p>
-  <!--https://www.w3schools.com/howto/howto_css_image_gallery.asp & https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_dots2 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_gallery-->
+<h2>Arrangementer & opdateringer</h2>
+</div>
+  <!--For at lave vores responsive arrangementer og nyheder har vi gjort brug af den følgende skabalon fra W3schools Image Gallery.https://www.w3schools.com/howto/howto_css_image_gallery.asp
+  Billederne fungerer som vores små "nyheds" eller "arrangementposters", og vi har responsive class til at stå for alt det responsive under CSS styles og gallery til at fungere som størrelsesforholdene på billederne.
+  Derudover har vi gjort brug af modals fra W3school til at agere som vores informationscontentboks. https://www.w3schools.com/howto/howto_css_modals.asp
+ Vi har button, som fungerer som vores title/header, og når brugeren klikker på denne, så vil han blive ledt til en boks af information. 
+ Disse modaler gør brug af javascript. ID'erne myModal1, ModalG2, ModalBo3 og Modalgri4 er connected til javascripten i bunden, f.eks. åbner den og lukker den.-->
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/Dartsklub.png">
-        <img src="images/Dartsklub.png" alt="Cinque Terre" width="600" height="400"></a>
-      <button class="desc" id="myBtn">Dart konkurrence d. 22/12</button>
-      <div id="myModal" class="modal">
+        <img src="images/generalforsamling.png" alt="Fire hænder der danner en firkant" width="600" height="400"></a>
+      <button class="desc" id="myBtn">Indkaldelse til generalforsamling</button>
+      <div id="myModal1" class="modal">
 
-        <!-- Modal content -->
+        <!-- Modal content. Det indhold som er placeret inde i overlayen (modal boksen). Class er stylet i CSS, og indeholder alt det content som ses inde i informationsboksene. https://www.w3schools.com/howto/howto_css_modals.asp
+        Derudover er der også classes, som tekst og referatliste, som indeholder bestemte CSS styles til vores content. -->
         <div class="modal-content">
-          <span class="close">&times;</span>
-
+          <span class="close" onclick="closeModal('myModal1')">&times;</span>
+            <h2>Indkaldelse til Generalforsamling.</h2>
+            <h3>Søndag, den 30. april 2023 kl. 12.15 i LOBbyen</h3>
+            <div class="tekst">
+            <p>Dagsorden i h.t vedtægternes § 9:</p>
+            <ol>
+              <li>Valg af dirigent</li>
+              <li>Beretning</li>
+              <li>Indkomne forslag</li>
+              <li>Fastsættelse af kontingent</li>
+              <li>Valg af bestyrelsesmedlemmer, suppleanter og revisorer</li>
+              <li>Eventuelt</li>
+            </ol>
+            <p>Forslag, der ønskes behandlet, skal være fremsendt til formanden, Allan Thomsen, senest 8 dage
+              før generalforsamlingen.</p>
+            <p><strong>På valg til bestyrelsen</strong></p>
+            <ul class="referatliste">
+              <li>Niel Arne Markussen - modtager genvalg.</li>
+              <li>Henry Gade - modtager genvalg.</li>
+              <li>Allan Thomsen - modtager genvalg.</li>
+              <li>Men, modkandidater til bestyrelsen er mere end velkomne.</li>
+            </ul>
+            <p><strong>på valg som revisor</strong></p>
+            <ul class="referatliste">
+            <li>Søren Ravnsgaard </li>
+          </ul>
+          <p><strong>Tilmelding pr. SMS til spisning senest lørdag, den 19. april 2023</strong> til Karl-Jørgen Nielsen, mobil nr. 23 35 35 53, eller på seddel i LOBbyen.</p>
+          <p>Tilmelding til selve generalforsamlingen er ikke nødvendigt</p>
+          <p><strong>Dagens udfordringer</strong></p>
+          <ul class="referatliste">
+            <li>Kl. 09:45 - Vi mødes i LOBbyen i kælderen under hal 2, hvor foreningen er vært ved en ”lille ting”, så vi kan ønske hinanden en rigtig god dag</li>
+            <li>Kl. 10:00 - Valgfri kondiløb eller cykelløb til Skærbæk Sø - P-plads, hvor der igen i år serveres lune deller og bestyrelsen vil sørge for en god jægerte og andre forfriskninger, så vi ikke vender ”udtørrede” hjem til LOBbyen.</li>
+            <li><strong>Kl. 12:15 - Generalforsamling i LOBbyen</strong></li>
+            <li>Kl. 14:00 - Vi spiser en god herremiddag og selvfølgelig serveres der kaffe/kage/cognac. Efter spisningen er der masser af hyggeligt samvær med rafling, kortspil og vittigheder. Ja, der er selvfølgelig også en poolturnering, hvor årets poolmestre bliver kåret.</li>
+            <li>Kl. 19:00 - Seneste tidspunkt for afslutning på en hyggelig dag</li>
+          </ul>
+          <p>Mød nu op til en hyggedag, og vær med til at også du sætter dit præg på foreningen.</p>
         </div>
       </div>
     </div>
   </div>
-
+</div>
+  <!--For at lave vores responsive arrangementer og nyheder har vi gjort brug af den følgende skabalon fra W3schools Image Gallery.https://www.w3schools.com/howto/howto_css_image_gallery.asp
+  Billederne fungerer som vores små "nyheds" eller "arrangementposters", og vi har responsive class til at stå for alt det responsive under CSS styles og gallery til at fungere som størrelsesforholdene på billederne.
+  Derudover har vi gjort brug af modals fra W3school til at agere som vores informationscontentboks. https://www.w3schools.com/howto/howto_css_modals.asp
+ Vi har button, som fungerer som vores title/header, og når brugeren klikker på denne, så vil han blive ledt til en boks af information. 
+ Disse modaler gør brug af javascript. ID'erne myModal1, ModalG2, ModalBo3 og Modalgri4 er connected til javascripten i bunden, f.eks. åbner den og lukker den.-->
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/men.png">
         <img src="images/men.png" alt="Mænd siddende ved en computer" width="600" height="400"></a>
-      <button class="desc" id="BtnG">Generalforsamling</button>
-      <div id="ModalG" class="modalG">
+      <button class="desc" id="BtnG">Referat Generalforsamling</button>
+      <div id="ModalG2" class="modalG">
 
-        <!-- Modal content. Det indhold som er placeret inde i overlayen (modal boksen)-->
+        <!-- Modal content. Det indhold som er placeret inde i overlayen (modal boksen). Class er stylet i CSS, og indeholder alt det content som ses inde i informationsboksene. https://www.w3schools.com/howto/howto_css_modals.asp
+        Derudover er der også classes, som tekst og referatliste, som indeholder bestemte CSS styles til vores content. -->
         <div class="referat-content">
-          <span class="close">&times;</span>
+          <span class="close" onclick="closeModal('ModalG2')">&times;</span>
           <h2>Generalforsamling, søndag den 30. april 2023 kl. 12.15 i LOBbyen.</h2>
+          <div class="tekst">
           <p><strong>Dagsorden:</strong></p>
           <ol>
             <li>Valg af dirigent.</li>
@@ -278,11 +184,11 @@
           </ol>
           <p><strong>På valg til bestyrelsen</strong></p>
           <p><strong> A. Bestyrelsesmedlemmer.</strong></p>
-          <ul>
-            <li class="referatliste">Niel Arne Markussen - modtager genvalg.</li>
-            <li class="referatliste">Henry Gade - modtager genvalg.</li>
-            <li class="referatliste">Allan Thomsen - modtager genvalg.</li>
-            <li class="referatliste">Men, modkandidater til bestyrelsen er mere end velkomne.</li>
+          <ul class="referatliste">
+            <li>Niel Arne Markussen - modtager genvalg.</li>
+            <li>Henry Gade - modtager genvalg.</li>
+            <li>Allan Thomsen - modtager genvalg.</li>
+            <li>Men, modkandidater til bestyrelsen er mere end velkomne.</li>
           </ul>
           <p><strong>B. Suppleanter.</strong></p>
           <p><strong>C. Revisorer.</strong></p>
@@ -399,23 +305,28 @@
           <div class="signature">
             <img src="images/underskrift.jpg" alt="Underskrift udført af referatskriver Bent Jensen">
           </div>
-
+</div>
         </div>
       </div>
     </div>
   </div>
-
+  <!--For at lave vores responsive arrangementer og nyheder har vi gjort brug af den følgende skabalon fra W3schools Image Gallery.https://www.w3schools.com/howto/howto_css_image_gallery.asp
+  Billederne fungerer som vores små "nyheds" eller "arrangementposters", og vi har responsive class til at stå for alt det responsive under CSS styles og gallery til at fungere som størrelsesforholdene på billederne.
+  Derudover har vi gjort brug af modals fra W3school til at agere som vores informationscontentboks. https://www.w3schools.com/howto/howto_css_modals.asp
+ Vi har button, som fungerer som vores title/header, og når brugeren klikker på denne, så vil han blive ledt til en boks af information. 
+ Disse modaler gør brug af javascript. ID'erne myModal1, ModalG2, ModalBo3 og Modalgri4 er connected til javascripten i bunden, f.eks. åbner den og lukker den.-->
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/bowling.png">
         <img src="images/bowling.png" alt="Bowling kegler" width="600" height="400"></a>
       <button class="desc" id="BtnBo">Bowling mesterskab d. 26/10</button>
-      <div id="ModalBo" class="modalbow">
+      <div id="ModalBo3" class="modalbow">
 
-        <!-- Modal content -->
+        <!-- Modal content. Det indhold som er placeret inde i overlayen (modal boksen). Class er stylet i CSS, og indeholder alt det content som ses inde i informationsboksene. https://www.w3schools.com/howto/howto_css_modals.asp
+        Derudover er der også classes, som tekst og referatliste, som indeholder bestemte CSS styles til vores content. -->
         <div class="bowling-content">
-          <span class="close">&times;</span>
+          <span class="close" onclick="closeModal('ModalBo3')">&times;</span>
           <h2>LOB inviterer til årets Bowling mesterskab 2023, torsdag 26. oktober</h2>
+          <div class="tekst">
           <p>Mødetid i Herning Bowlinghal Kl. 17.45, Fyrrevej 6 – 7400 Herning</p>
           <p>Vi spiller fra kl. 18.00 – 19.00</p>
           <p>Pris per spiller kr. 75.00</p>
@@ -426,18 +337,24 @@
       </div>
     </div>
   </div>
-
+</div>
+  <!--For at lave vores responsive arrangementer og nyheder har vi gjort brug af den følgende skabalon fra W3schools Image Gallery.https://www.w3schools.com/howto/howto_css_image_gallery.asp
+  Billederne fungerer som vores små "nyheds" eller "arrangementposters", og vi har responsive class til at stå for alt det responsive under CSS styles og gallery til at fungere som størrelsesforholdene på billederne.
+  Derudover har vi gjort brug af modals fra W3school til at agere som vores informationscontentboks. https://www.w3schools.com/howto/howto_css_modals.asp
+ Vi har button, som fungerer som vores title/header, og når brugeren klikker på denne, så vil han blive ledt til en boks af information. 
+ Disse modaler gør brug af javascript. ID'erne myModal1, ModalG2, ModalBo3 og Modalgri4 er connected til javascripten i bunden, f.eks. åbner den og lukker den.-->
   <div class="responsive">
     <div class="gallery">
-      <a target="_blank" href="images/sommeraften.png">
         <img src="images/sommeraften.png" alt="Flere øl og en grill" width="600" height="400"></a>
       <button class="desc" id="BtnGr">Grill ved Sunds Sø d. 11/9</button>
-      <div id="Modalgri" class="modalgril">
+      <div id="Modalgri4" class="modalgril">
 
-        <!-- Modal content -->
+        <!-- Modal content. Det indhold som er placeret inde i overlayen (modal boksen). Class er stylet i CSS, og indeholder alt det content som ses inde i informationsboksene. https://www.w3schools.com/howto/howto_css_modals.asp
+        Derudover er der også classes, som tekst og referatliste, som indeholder bestemte CSS styles til vores content. -->
         <div class="grill-content">
-          <span class="close">&times;</span>
+          <span class="close" onclick="closeModal('Modalgri4')">&times;</span>
           <h2> Sommer-Grill ved Sunds Sø</h2>
+          <div class="tekst">
           <p>Denne hyggeaften sammen med vores damer</p>
           <p>Mandag den 11. September 2023 kl. 17.00.</p>
           <p>Vi starter på nordsiden, Nordsøvej 20, hvor biler og cykler parkeres. Herfra vandrer vi i samlet flok mod
@@ -454,9 +371,8 @@
       </div>
     </div>
   </div>
-
+</div>
   <div class="clearfix"></div>
-
 
 
 
@@ -470,7 +386,7 @@ så det er muligt for brugeren at besøge disse andre foreninger mm. De er bleve
       <li><a href="vedtægter.html">Vedtægter</a></li><br>
       <li>Andre foreninger:</li>
       <li><a href="https://www.lindoldgirls.dk/"target="_blank">lindoldgirls.dk | <a href="http://www.lindborger.dk/"target="_blank">lindborger.dk | <a href="https://alpihallerne.dk/"target="_blank"> alpihallerne.dk | <a href="https://desmaaklinger.dk/"target="_blank">desmaaklinger.dk</a></li>
-      <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
+      <p>Denne side er udelukkende til undervisningsformål</p>
   </ul>
   </footer>
   
@@ -501,111 +417,105 @@ så det er muligt for brugeren at besøge disse andre foreninger mm. De er bleve
 
 
 
-    // Get the modal - For Dart Konkurrence 
-    var modal1 = document.getElementById("myModal");
+    // INDBYDELSE TIL GENERALFORSAMLING: Dette javascript henviser til vores modal 'Indbydelse til generalforsamlingen'.
+    // myModal1 referer til indholdet længere oppe, og opretter derved forbindelse til javascripten. Dette samme gør myBtn. 
+    //https://www.w3schools.com/howto/howto_css_modals.asp
+    //Denne del er blevet lavet ved hjælp af ChatGPT https://chat.openai.com/share/63f58228-65ec-49f4-ae86-2dc4a4893baf da der har været generelle problemer med at lave adskillige modaler, 
+    //og lukningsfunktionen har ikke virket. 
+    //ChatGPT https://chat.openai.com/share/1295fc3e-cd63-4c44-9162-f89d08c03913 er blevet brugt i starten af opbygningen af modalerne, da der var usikkerhed omkring lukningsfunktionen, og om man kun kunne benytte modalerne én gang. 
+    var modal1 = document.getElementById("myModal1");
 
-    // Get the button that opens the modal -  For Dart Konkurrence 
+    // Henter CTA knappen 'Indbydelse til generalforsamling', som så kan åbne modalet. 
     var btn1 = document.getElementById("myBtn");
 
-    // Get the <span> element that closes the modal
+    // <span> Får modalet til at lukke sig sammen.
     var span1 = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on the button, open the modal
+    // Får modalet til åbne sig, når brugeren klikker på det. 
     btn1.onclick = function () {
       modal1.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
+    // Når brugeren klikker <span> (x), så skal modalet lukke sig sammen. (I myModal1 - dette ene modal virker ikke)
     span1.onclick = function () {
       modal1.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal1) {
-        modal1.style.display = "none";
-      }
-    }
+   // REFERAT GENERALFORSAMLING: Dette javascript henviser til vores modal 'Referat generalforsamlingen'.
+    // ModalG2 referer til indholdet længere oppe, og opretter derved forbindelse til javascripten. Dette samme gør BtnG. 
+    //https://www.w3schools.com/howto/howto_css_modals.asp
+    var modal2 = document.getElementById("ModalG2");
 
-    // Get the modal - For referat Konkurrence 
-    var modal2 = document.getElementById("ModalG");
-
-    // Get the button that opens the modal -  For Referat generalforsamling  
+    //Henter CTA knappen 'Referat generalforsamling', som så kan åbne modalet.
     var btn2 = document.getElementById("BtnG");
 
-    // Get the <span> element that closes the modal
+ // <span> Får modalet til at lukke sig sammen.
     var span2 = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on the button, open the modal
+ // Får modalet til åbne sig, når brugeren klikker på det. 
     btn2.onclick = function () {
       modal2.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
+    // Når brugeren klikker <span> (x), så skal modalet lukke sig sammen. 
     span2.onclick = function () {
       modal2.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal2) {
-        modal2.style.display = "none";
-      }
-    }  
 
+   // BOWLING: Dette javascript henviser til vores modal 'Bowling'.
+    // ModalBo3 referer til indholdet længere oppe, og opretter derved forbindelse til javascripten. Dette samme gør BtnBo. 
+    //https://www.w3schools.com/howto/howto_css_modals.asp
+    var modal3 = document.getElementById("ModalBo3");
 
-    // Get the modal - For Bowling 
-    var modal3 = document.getElementById("ModalBo");
-
-    // Get the button that opens the modal -  For Bowling  
+     //Henter CTA knappen 'Bowling', som så kan åbne modalet.
     var btn3 = document.getElementById("BtnBo");
 
-    // Get the <span> element that closes the modal
+    // <span> Får modalet til at lukke sig sammen.
     var span3 = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on the button, open the modal
+ // Får modalet til åbne sig, når brugeren klikker på det. 
     btn3.onclick = function () {
       modal3.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
+  // Når brugeren klikker <span> (x), så skal modalet lukke sig sammen. 
     span3.onclick = function () {
       modal3.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal3) {
-        modal3.style.display = "none";
-      }
-    }
+   // GRILL: Dette javascript henviser til vores modal 'Grill'.
+    //Modalgri4 referer til indholdet længere oppe, og opretter derved forbindelse til javascripten. Dette samme gør BtnGr. 
+    //https://www.w3schools.com/howto/howto_css_modals.asp
+    var modal4 = document.getElementById("Modalgri4");
 
-
-    // Get the modal - For Grill 
-    var modal4 = document.getElementById("Modalgri");
-
-    // Get the button that opens the modal -  For Grill  
+    //Henter CTA knappen 'Gril', som så kan åbne modalet.
     var btn4 = document.getElementById("BtnGr");
 
-    // Get the <span> element that closes the modal
+    // <span> Får modalet til at lukke sig sammen.
     var span4 = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on the button, open the modal
+ // Får modalet til åbne sig, når brugeren klikker på det. 
     btn4.onclick = function () {
       modal4.style.display = "block";
     }
+//Denne del er blevet lavet ved hjælp af ChatGPT https://chat.openai.com/share/63f58228-65ec-49f4-ae86-2dc4a4893baf, https://chat.openai.com/share/1295fc3e-cd63-4c44-9162-f89d08c03913
+//Denne funktion hjælper med at lukke modalerne, når brugeren klikker på (X).
+  function closeModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "none";
+}
 
-    // When the user clicks on <span> (x), close the modal
-    span4.onclick = function () {
-      modal4.style.display = "none";
+//Denne del er blevet lavet ved hjælp af ChatGPT https://chat.openai.com/share/63f58228-65ec-49f4-ae86-2dc4a4893baf, https://chat.openai.com/share/1295fc3e-cd63-4c44-9162-f89d08c03913
+//Denne funktion hjælper med at lukke modalerne, når brugeren klikker udenfor modalet.
+window.onclick = function(event) {
+  var modals = document.getElementsByClassName('modal');
+  for (var i = 0; i < modals.length; i++) {
+    if (event.target == modals[i]) {
+      modals[i].style.display = "none";
     }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal4) {
-        modal4.style.display = "none";
-      }
-    }
+  }
+}
   </script>
 </body>
 

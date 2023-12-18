@@ -1,33 +1,33 @@
+/*Angiver fonten*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+
+/*Angiver bagrundsfarven på hele bodyen, samt margen og font-family.*/
 body {
     background-color: #f9f6f0;
     margin: 0;
-    font-family: "oswald", sans-serif;
+    font-family:'Oswald', sans-serif;   
+}
+/*Angiver font-family på knapperne, og input (placehodler content og option i vores 'sign up form'.*/
+button, input, option {
+    font-family:'Oswald', sans-serif;   
 }
 
-/* background-color ændre farven på baggrund. color ændrer farven på tekst. display definerer elementet, som flex 
-container og hvere child element inden i er et flex element. justify-content placerer teksten til højre. 
-padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav i forhold til sidens toppen*/
+/* Classen tekst, h1, h2, h3 og h4 har en generel regel om at farven skal være det den sat til. Medmindre andet er angivet. */
 
 .tekst, h1, h2, h3, h4 {
     color: #494848;
 }
 
+/*Classen Tekst bliver primært brugt ved tagget P, og angiver størrelsen på fonten. Medmindre andet er angivet på de andre sider. */
 .tekst {
     font-size: 16px;
 
 }
 
-/*.lob {
-    background-color: #2b4257;
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 24px;
-    z-index: 5;  
-{*/
-
+/*Navigation her har vi baggrundsfarve, tekstfarve som skal være hvid på vores nav. 
+Og overflow hidden som gemmer elementer på navigationsbaren, hvis andet angives. 
+https://www.w3schools.com/cssref/pr_pos_overflow.php
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 .navigation {
     background-color: #2b4257;
     overflow: hidden;
@@ -35,6 +35,8 @@ padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav 
 
 }
 
+/*Navigation a angiver forskellige størrelsesforhold til vores content i vores navbar, såsom fællesskab, sport og kontakt.
+https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 .navigation a {
     float: left;
     display: block;
@@ -47,87 +49,71 @@ padding , font-weight definerer tykkelsen på skriften. margin-top placerer nav 
     position: sticky;
 }
 
-.navigation a:hover {
+/*Her har vi lavet styling på, når brugeren bevæger sig over de forskellige links i navbaren samt footeren.*/
+.navigation a:hover, footer a:hover {
     text-decoration: underline;
 
 }
 
-.navigation a:link,
-.navigation a:visited {
+a:link, a:visited {
     color: #ffffff;
     text-decoration: none;
+/*Her har vi lavet styling, når brugeren har besøgt et link.*/    
 }
 
-.navigation a.icon {
-    display: contents;
-
-}
-
-a.hover {
-    text-decoration: underline;
-}
-
-a:link,
-a:visited {
-    color: #ffffff;
-    text-decoration: none;
-}
-
+/*Hvis skærmen når en størrelse på minimum 701 px, så vil den gemme navigationshamburger ikonet.https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 @media only screen and (min-width: 701px) {
-
     .fa.fa-bars,
     .icon {
         display: none;
     }
 }
 
-/* margin-left placerer logoet i venstre side af skærmen. position sticky sørger for at logoet følger navigationsbar
-z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til toppen*/
-/*.logo {
-    margin-left: 15px;
-    z-index: 1;
-    position: sticky;
-    top: 1px;
-    display: block;
-}      */
+/* Display flex gør at logoet er responsivt og følger med, når skærmstørrelsen ændrer sig.*/
 .logo a img {
     display: flex;
 }
 
+/*Her er der blevet flyttet rundt, så logoet er blevet placeret 4% fra venstre side. 
+Vi har inkluderet margin-right, så fællesskabet, sport og kontakt står i højre side.*/
 .logo a {
     padding: 0;
     margin-right: 55%;
     margin-left: 4%;
 }
-
+/* Vi har lavet noget styling på mySlides, som er billederne i vores billedegalleri fremvist på forsiden. 
+Vi har lagt billederne, således de er placeret i midten af skærmen og med lidt margin fra toppen. 
+Derudover responderer de ift. procentvis, når skærmstørrelsen ændres. https://www.w3schools.com/w3css/w3css_slideshow.asp*/
 .mySlides {
     margin-top: 50px;
     margin-left: 2.8%;
     margin-right: 1.5%;
 }
-
+/*Denne class er pilen, som er fremvist på forsiden under billedegalleriet. Den er placeret med margin-left og procenter, 
+så den responderer efter skærmstørrelser. https://www.w3schools.com/w3css/w3css_slideshow.asp*/
 .w3-left {
     margin-left: 20%;
     cursor: pointer;
     display: inline-block;
 }
-
+/*Denne class er pilen, som er fremvist på forsiden under billedegalleriet. Den er placeret med margin-left og right, opsat i procenter, 
+så den responderer efter skærmstørrelser. https://www.w3schools.com/w3css/w3css_slideshow.asp*/
 .w3-right {
     margin-right: 8%;
     margin-left: 62%;
     cursor: pointer;
     display: inline-block;
 }
-
+/*Denne er en class rundt om begge pile på forsiden. Vi har givet den noget luft, så den ikke sidder direkte oppe i vores billedegalleri. https://www.w3schools.com/w3css/w3css_slideshow.asp*/
 .w3-center.w3-container.w3-section.w3-large.w3-text-white.w3-display-bottommiddle {
     margin-top: 1%;
 }
-
+/*Bruges til at give noget space til venstre side, så vores indhold kommer lidt ind.*/
 .move-front {
     margin-left: 35px;
 }
 
-/*https://www.w3schools.com/csS/css3_buttons.asp*/
+/*Disse to knapper er skabt med den hensigt, at de skal fremvises på forsiden på mobile view. Vi har brugt denne hjemmeside til at være sikre på, at vi har opsat dem korrekt. https://www.w3schools.com/csS/css3_buttons.asp*/
 .bluebutton1,
 .bluebutton2 {
     background-color: #2b4257;
@@ -139,22 +125,24 @@ z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til t
     font-size: 16px;
     width: 145px;
     height: 42px;
+    
 
 }
-
+/*Denne class er en boks, og den indeholder begge bluebuttons fremvist foroven. De fremvises på forsiden på mobile view, og er placeret i midten*/
 .frontbuttons {
     display: inline;
     margin-left: 10%;
 }
 
-/*Skjuler de to blå CTA'er, når skærmer er på minimum 900 px.*/
+/*Skjuler de to blå CTA'er på forsiden, når skærmer er på minimum 900 px.*/
 @media screen and (min-width: 900px) {
     .frontbuttons {
         display: none;
     }
 }
 
-/* Button used to open the contact form - fixed at the bottom of the page */
+/* Denne class er til vores sign-up button. Dette er formen, den har inden brugeren klikker på den og den udvides. 
+https://www.w3schools.com/howto/howto_js_popup_form.asp */
 .open-button {
     background-color: #FBB80F;
     padding: 16px 20px;
@@ -169,7 +157,7 @@ z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til t
     color: #494848;
 }
 
-/* The popup form - hidden by default */
+/* Dette er når brugeren har klikket på open-button, og så fremvises formen. https://www.w3schools.com/howto/howto_js_popup_form.asp */
 .form-popup {
     display: none;
     position: fixed;
@@ -179,13 +167,15 @@ z-index 1 ligger logoet over navigationsbar. top placerer logoet i forhold til t
     z-index: 9;
 }
 
-/* Add styles to the form container */
+/* Dette er formen på tilmeldingsformularen.https://www.w3schools.com/howto/howto_js_popup_form.asp  */
 .form-container {
     max-width: 300px;
     padding: 10px;
     background-color: #E39603;
 }
 
+/*Dette er stylingen på de sektioner inde i vores tilmeldingsformularen.
+Så der er en indikation på hvor brugeren skal indsætte sit navn, tlf. nummer og email osv. Derudover er der også en color på fonten.*/
 input[type=text],
 select,
 textarea {
@@ -200,19 +190,21 @@ textarea {
     color: #494848;
 }
 
+/*Dette er teksten fremvist foroven af inputfelterne. https://www.w3schools.com/howto/howto_js_popup_form.asp*/
 .form-container {
     font-size: 16px;
     color: #494848;
     font-weight: bold;
 }
 
-/* When the inputs get focus, do something*/
+/* Der* skabes fokus, når brugeren typer i inputfelterne i tilmeldingsformularen.*/
 .form-container input[type=text]:focus {
     background-color: #F0EEEE;
     outline: none;
 }
 
-/* Set a style for the submit/login button */
+/*Her er der angivet styling for CTA knappen fremvist inde i tilmeldingsofrmularen, 
+og som er tilmeld mig knappen.https://www.w3schools.com/howto/howto_js_popup_form.asp*/
 .form-container .btn {
     background-color: #FBB80F;
     color: white;
@@ -226,18 +218,14 @@ textarea {
     font-size: 16px;
 }
 
-/* Add a red background color to the cancel button */
+/*Her er der angivet styling for CTA knappen fremvist inde i tilmeldingsofrmularen, 
+og som er LUk knappen.https://www.w3schools.com/howto/howto_js_popup_form.asp*/
 .form-container .cancel {
-    background-color: #FBB80F;
+    background-color: #dcbb67;
     font-size: 16px;
     color: #494848;
     font-weight: bold;
 }
-
-/* Add some hover effects to buttons 
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}*/
 
 /*Div. gallery style er den boks, som omfanger vores images og tekst. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
 div.gallery {
@@ -245,9 +233,6 @@ div.gallery {
     margin-top: 5px;
 }
 
-/*div.gallery:hover {
-           border: 1px solid #777;
-          }*/
 /* div.gallery img er det størrelsesforhold vores billede skal have. https://www.w3schools.com/howto/howto_css_image_gallery.asp */
 div.gallery img {
     width: 100%;
@@ -276,14 +261,13 @@ div.gallery img {
        mellem vores navigationbar samt vores elementer placeret under overskrifterne.Derudover er der angivet en font-size, farve og vægt.*/
 .soctitel {
     margin-bottom: 15px;
-    margin-top: 18px;
-    font-size: 20px;
-    margin-left: 10px;
+    margin-top: 3%;
+    margin-left: 30px;
     color: #494848;
-    font-weight: bold;
+    
 }
 
-/**/
+/*https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
 * {
     box-sizing: border-box;
 }
@@ -304,81 +288,73 @@ div.gallery img {
     }
 }
 
-/*Media only screen - max-width 500px, angiver hvilken størrelse boksen skal have, når de fremvises på en skærm op til 700 px. https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
+/*Media only screen - max-width 500px, angiver hvilken størrelse boksen skal have, når de fremvises på en skærm op til 500 px. https://www.w3schools.com/howto/howto_css_image_gallery.asp*/
 @media only screen and (max-width: 500px) {
     .responsive {
         width: 100%;
     }
 }
 
-/* https://www.w3schools.com/howto/howto_css_clearfix.asp*/
+/*Denne sørger for, at der ikke er noget indhold som "flyver rundt" efter et floating element. https://www.w3schools.com/howto/howto_css_clearfix.asp https://www.w3schools.com/howto/howto_css_image_gallery.asp**/
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
 }
-
+/*Denne class bliver brugt på fællesskabssiden, og angiver noget stylingen til teksterne, som fremvises inde i modalerne*/
 .fontklub {
     text-decoration: underline;
     font-weight: bold;
 }
-
+/*Når bruges en uordered list medmindre andet er angivet på de andre undersider, så skal der ikke vises nogen punkter mm., når indhold sættes op i lister.*/
 ul {
     list-style: none;
 }
-
+/*Dette er for at angive størrelsesforhold til vores billede fremvist på overlay siden med referat.*/
 .signature {
     width: 20%;
     height: auto;
 }
 
-/* The Modal (background) */
+/* Dette er modalerne, som fremvises på fællesskabssiden, og stylingen. https://www.w3schools.com/howto/howto_css_modals.asp  */
 .modal,
 .modalbow,
 .modalgril,
-.modalG {
+.modalG  {
     display: none;
-    /* Hidden by default */
+    /* Gemmer  */
     position: fixed;
-    /* Stay in place */
+    /* Sørger for, at overlayen sidder fast på siden, og ikke rykkes rundt.  */
     z-index: 1;
-    /* Sit on top */
+    /* Sørger for, at det sidder ovenpå alle de andre elementer. */
     left: 0;
     top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
+    width: 100%; /* Angiver den fulde bredde */
+    height: 100%; /* Angiver den fulde højde */
+    overflow: auto; /* Aktiverer scroll, hvis indholdet i overlayen er langt.*/
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
-.modal-content,
-.referat-content,
+/* Stylingen indeni vores modaler(overlays). Der er noget baggrundsfarve og en border og lidt forskellige højder, paddings. https://www.w3schools.com/howto/howto_css_modals.asp*/
+.modal-content, .referat-content,
 .bowling-content,
 .grill-content {
     background-color: #F9F6F0;
-    margin: 15% auto;
-    /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 3px solid #2b4257;
-    width: 80%;
-    /* Could be more or less, depending on screen size */
+    width: 80%; 
 }
 
-/* The Close Button */
+/* Dette er modalernes (X) CTA knap, så når brugeren vil lukke overlayen, så er denne fremvist. */
 .close {
     color: #000;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
-
+/*Angiver noget effekt på overlayens (X) knap*/
 .close:hover,
 .close:focus {
     color: #000;
@@ -386,25 +362,21 @@ ul {
     cursor: pointer;
 }
 
-    /* hver sport har sin egen box. */
-    /* margin right: Er kun her i box-fodbold fordi den blev ved med at hænge fast på badminton.
-     Efter mange forsøg med alt muligt blev det her løsningen */
+/* hver sport har sin egen box. */
+/* margin right: Er kun her i box-fodbold fordi den blev ved med at hænge fast på badminton.
+Efter mange forsøg med alt muligt blev det her løsningen */
 .box-badminton, .box-volleyball, .box-motion, .box-løb {
     background-color: #2b4257;
     padding: 10px;
     color: #fff;
-    /*width: 550px;*/
-    /*height: 400px;*/
     width: 350px;
     height: 477px;
     margin-block: 20px;
 }
-    .box-fodbold {
+.box-fodbold {
         background-color: #2b4257;
         padding: 10px;
         color: #fff;
-        /*width: 550px;*/
-        /*height: 400px;*/
         width: 350px;
         height: 477px;
         margin-block: 20px;
@@ -442,7 +414,14 @@ ul {
       margin-right: 20px;
     }
 }
+@media screen and (min-width: 780px) {
+    .row {
+      margin-left: 30px;
+      margin-top: 3%;
+    }
+}
 
+/*Dette er footeren, som indeholder noget styling og størrelse osv.*/
 footer {
     background-color: #2b4257;
     color: #ffffff;
@@ -455,6 +434,7 @@ footer {
 
 }
 
+/*Der er også blevet lavet en footer ul, således der ikke fremvises nogle elementer i punktformer, hvis indholdet opsættes i en liststyle*/
 footer ul {
     list-style-type: none;
 }

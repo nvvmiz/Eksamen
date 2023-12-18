@@ -15,54 +15,63 @@
     <!--No index så den ikke publicere sig og google ikke kan finde den, men den skal findes gennem direkt Link-->
     <meta name="robots" content="noindex"> 
     <!-- dette er vores tekst font-->
-    <link href="https://fonts.google.com/specimen/Oswald?query=oswald" rel="stylesheet" type="test/css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet" type="test/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      
-      /* Container for flexboxes. Display ændrer elementer til flexible, og flex-wrap 'wrapper' elemeneter */
-      .row {
-        display: flex;	
-        flex-wrap: wrap;
-      }
-      
-      
-      
-      /* Create four equal columns */
-      .column {
-        flex: fixed;
-        padding: 20px;
-        display: inline-block;
-      
-        
-      }
-      
-      /* On screens that are 992px wide or less, go from four columns to two columns */
-      @media screen and (max-width: 992px) {
-        .column {
-          flex: 25%;
-        }
-      }
-      
-      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
-        .row {
-          flex: 50%;
-        }
-        .column{
-          padding: 9px;
-        }
-      
-      }
-      
-      .move-right {
-        margin-left: 15px;
-      }
-      
-      </style>
-      </head>
+* {
+  box-sizing: border-box;
+}
+
+/* Container for flexboxes. Display ændrer elementer til flexible, og flex-wrap 'wrapper' elemeneter */
+.row {
+  display: flex;	
+  flex-wrap: wrap;
+}
+
+
+
+/* Create four equal columns */
+.column {
+  flex: fixed;
+  padding: 20px;
+  display: inline-block;
+
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 25%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex: 50%;
+  }
+}
+  .column{
+    padding: 6px;
+  }
+
+.move-right {
+  margin-left: 30px;
+}
+
+  .contactimg {
+    margin-top: 50px;
+    margin-left: 2.8%;
+    margin-right: 1.5%;
+  } 
+
+p {
+  margin: 0;
+  color: #494848;
+}
+    
+</style>
+</head>
 
   <body>
     <!-- Div class navigation og id=mynavigation er vores navigation bar, hvor div navigation omfatter hele containeren af information,
@@ -75,145 +84,140 @@
       </div> 
         <a href="fællesskabet.html">Fællesskabet</a>
         <a href="Sport.html">Sport</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html"><strong>Kontakt</a></strong>
         <!--Javascript er til for at få vores navigationsbar til at udvide sig og lukke sig, når brugeren befinder sig på en skærmstørrelse
           på max 700 px eller derunder. Og  fa fa-bars er vores hamburgermenu, som useren kan se og klikke på, når skærmstørrelsen er på max 700 px eller derunder.-->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
         <i class="fa fa-bars"></i>
   </div>
-    
-  <br>
-    <div id="content" class="move-right">
-    <p>
-      Såfremt du har lyst til hyggeligt fællesskab, hvor det primære fokus er på hygge med bl.a.
-      at spille pool, se fodbold eller en snak, så mød op i LOBbyen.
-      <br><br>
-      Du er altid velkommen til at stikke hovedet ind i LOBbyen onsdag aften fra kl. 19.30 - 21:30, ,
-      eller lørdag mellem kl. 11.00 – 13.00 for at fornemme klubånden, hvis du ønsker at tegne medlemskab.
-    </p>
-  
-  <h2>Bestyrelsen:</h2>
+<div class="soctitel">
+  <h1>Kontakt Lind Old Boys</h1>
+</div>
+<div class="contactimg"><img src="images/football.png" style="width: 97%; height:50%" alt="Mænd der holder om hinanden efter fodboldkamp"></div>
+<div id="content" class="move-right">
+  <p>Såfremt du har lyst til et hyggeligt fællesskab, hvor det primære fokus er på hygge med bl.a. at spille pool, se fodbold eller en snak, så mød op i LOBbyen.</p>
+  <p>Du er altid velkommen til at stikke hovedet ind i LOBbyen onsdag aften fra kl. 19.30 - 21:30, eller lørdag mellem kl. 11.00 – 13.00 for at fornemme klubånden, ellers er du meget velkommen til at kontakte bestyrelsen.</p>
+<h2 >Bestyrelsen:</h2>
+</div>
+
+<!--https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_flex for responsive columns-->
+<div class="row">
+  <div class="column">
+  <p><b>Formand:</b></p>
+  <p>Allan Thomsen</p>
+  <p>Tlf. 4174 1679</p>
+  <p>ath@jysk.com</p>
+</div>
+
+<div class="column">
+    <p><b>Næstformand:</b></p>
+    <p>Niels Arne Markussen</p>
+    <p>Tlf. 2121 1409</p>
+    <p>nielsarne@averhoff.one</p>
   </div>
   
-  <!--https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_flex for responsive columns-->
-  <div class="row">
-  <div class="column" style="background-color:#fff;">
-    <p><b>Formand::</b><br>
-        Allan Thomsen<br>
-        Tlf. 4174 1679<br>
-        ath@jysk.com</p>
+  <div class="column">
+    <p><b>Kasserer:</b></p>
+    <p>Henry Gade</p>
+    <p>Tlf. 2811 6974</p>
+    <p>h.gade@kabelmail.dk</p>
+  </div>
+
+  <div class="column">
+    <p><b>Sekretær:</b></p>
+    <p>Bent Jensen</p>
+    <p>Tlf. 6169 0397</p>
+    <p>bluesbent@jensen.mail.dk</p>
+  </div>
+
+  <div class="column">
+    <p><b>2. Næstformand:</b></p>
+    <p>Jørgen Eybye</p>
+    <p>Tlf. 2278 7735</p>
+    <p>jbeybye@gmail.com</p>
   </div>
   
-    <div class="column" style="background-color:#fff;">
-      <p><b>Næstformand:</b><br>
-          Niels Arne Markussen<br>
-          Tlf. 2121 1409<br>
-          nielsarne@averhoff.one</p>
-    </div>
-    
-    <div class="column" style="background-color:#fff;">
-      <p><b>Kasserer:</b><br>
-        Henry Gade<br>
-        Tlf. 2811 6974<br>
-        h.gade@kabelmail.dk</p>
-    </div>
   
-    <div class="column" style="background-color:#fff;">
-      <p><b>Sekretær:</b><br>
-        Bent Jensen<br>
-        Tlf. 6169 0397<br>
-        bluesbent@jensen.mail.dk</p>
-    </div>
-  
-    <div class="column" style="background-color:#fff;">
-      <p><b>2. Næstformand:</b><br>
-        Jørgen Eybye<br>
-        Tlf. 2278 7735<br>
-        jbeybye@gmail.com</p>
-    </div>
-    
-    
-    <div class="column" style="background-color:#fff;">
-      <p><b>3. Næstformand:</b><br>
-        Ole Hansen<br>
-        Tlf. 2299 2896<br>
-        Jette.olehansen@gmail.com</p>
-    </div>
+  <div class="column">
+    <p><b>3. Næstformand:</b></p>
+    <p>Ole Hansen</p>
+    <p>Tlf. 2299 2896</p>
+    <p>jette.olehansen@gmail.com</p>
   </div>
-  
-  <div class="move-right">
-  <h2>Holdkaptajner:</h2>
-  </div>
-  
-  <div class="row">
-    <div class="column" style="background-color:#fff;">
-      <p><b>Fodbold:</b><br>
-        <b>Old Boys 30+:</b><br>
-            Allan Thomsen<br>
-            Tlf. 4174 1679<br>
-            ath@jysk.com<br>
-            <b>&</b><br>
-            Dino Vestergaard <br>
-            Tlf. 4071 8356<br>
-            dinovestergaard.@hotmal.com</p></div>
-            
-  
-          <div class="column" style="background-color:#fff;">
-            <p><b>Fodbold:</b><br>
-              <b>Old Boys 40+</b><br>
-              Allan Thomsen <br>
-              Tlf. 4174 1679 <br>
-              ath@jysk.com<br>
-             <b>&</b><br>
-            Christian Mosegaard<br>
-            Tlf. 2211 5559<br>
-            chri4696@gmail.com</p>
-          </div>
-    
-    
-      <div class="column" style="background-color:#fff;">
-        <p><b>Badminton:</b><br>
-        <b>Højgårdskolen:<br></b>
-            Bent Christensen<br>
-            Tlf. 21584172<br>
-            btc1950@hotmail.com
-            <br><b>ALPI Hallerne:</b><br>
-            Leif Holbæk<br>
-            Tlf. 26782352<br>
-            leifholmbaek.1@gmail.com
-            <br><b>&</b><br>
-            Jørgen Eybye<br>
-            Tlf. 22787735<br>
-            jbeybye@gmail.com</p>
-      </div>
-  
-      <div class="column" style="background-color:#fff;">
-        <p><b>Volley:</b><br>
-          Karl Jørgen Nielsen (Kalle)<br>
-          Tlf. 2335 3553<br>
-          Karljytte@hotmail.com<br>
-          <b>&</b><br>
-          Jørgen Eybye<br>
-          Tlf. 2278 7735<br>
-          Jbeybye@gmail.com</p>
-      </div>
-  
-      <div class="column" style="background-color:#fff;">
-        <p><b>Løb:</b><br>
-          Søren Ankerstjerne <br>
-          Tlf. 2073 1777 </p>
-      </div>
-  
-      <div class="column" style="background-color:#fff;">
-        <p><b>Motion:</b><br>
-          Bent Damsgaard <br>
-          Tlf. 2627 7965 <br>
-          bldamsgaard@gmail.com</p>
-      </div>
-  
-  
-  
+</div>
+
+<div class="move-right">
+<h2>Holdkaptajner:</h2>
+</div>
+<div class="row">
+  <div class="column">
+    <p><b>Fodbold:</b></p>
+      <p><b>Old Boys 28+:</b></p>
+      <p>Allan Thomsen</p>
+      <p>Tlf. 4174 1679</p>
+      <p>ath@jysk.com</p>
+      <p><b>&</b></p>
+      <p>Dino Vestergaard</p>
+      <p>Tlf. 4071 8356</p>
+      <p>dinovestergaard.@hotmal.com</p>
+</div>
+          
+
+<div class="column">
+    <p><b>Fodbold:</b></p>
+      <p><b>Old Boys 40+</b></p>
+      <p>Allan Thomsen</p> 
+      <p>Tlf. 4174 1679</p>
+      <p>ath@jysk.com</p>
+      <p><b>&</b></p>
+      <p>Christian Mosegaard</p>
+      <p>Tlf. 2211 5559</p>
+      <p>chri4696@gmail.com</p>
+ </div>
+
+<div class="column">
+      <p><b>Badminton:</b></p>
+      <p><b>Højgårdskolen:</b></p>
+      <p>Bent Christensen</p>
+      <p>Tlf. 21584172</p>
+      <p>btc1950@hotmail.com</p>
+      <p><b>ALPI Hallerne:</b></p>
+      <p>Leif Holbæk</p>
+      <p>Tlf. 26782352</p>
+      <p>leifholmbaek.1@gmail.com</p>
+      <p><br><b>&</b></p>
+      <p>Jørgen Eybye</p>
+      <p>Tlf. 22787735</p>
+      <p>jbeybye@gmail.com</p>
     </div>
+
+    <div class="column">
+      <p><b>Volley:</b></p>
+      <p>Karl Jørgen Nielsen (Kalle)</p>
+      <p>Tlf. 2335 3553</p>
+      <p>Karljytte@hotmail.com</p>
+      <p><b>&</b></p>
+      <p>Jørgen Eybye</p>
+      <p>Tlf. 2278 7735</p>
+      <p>jbeybye@gmail.com</p>
+    </div>
+    <div class="column">
+      <p><b>Løb:</b></p>
+      <p>Søren Ankerstjerne</p>
+      <p>Tlf. 2073 1777</p>
+    </div>
+
+    <div class="column">
+      <p><b>Motion:</b></p>
+      <p>Bent Damsgaard</p>
+      <p>Tlf. 2627 7965</p>
+      <p>bldamsgaard@gmail.com</p>
+    </div>
+
+
+
+  </div>
+
 <!-- Denne knap er lavet ved hjælp af W3 schools (link i slutningen af linjen). Knappen bliver brugt som vores tilmeldingsknap til Lind Old Boys. 
   Den har en class, fordi den er blevet stylet. Onclick=openform er det javascript, som er blevet brugt til at få formen til at åbne sig, når brugeren klikker på knappen.
   https://www.w3schools.com/howto/howto_js_popup_form.asp-->
@@ -265,7 +269,7 @@ så det er muligt for brugeren at besøge disse andre foreninger mm. De er bleve
       <li><a href="vedtægter.html">Vedtægter</a></li><br>
       <li>Andre foreninger:</li>
       <li><a href="https://www.lindoldgirls.dk/"target="_blank">lindoldgirls.dk | <a href="http://www.lindborger.dk/"target="_blank">lindborger.dk | <a href="https://alpihallerne.dk/"target="_blank"> alpihallerne.dk | <a href="https://desmaaklinger.dk/"target="_blank">desmaaklinger.dk</a></li>
-      <p><strong>Denne side er udelukkende til undervisningsformål</strong></p>
+      <p style="color: white;">Denne side er udelukkende til undervisningsformål</p>
   </ul>
   </footer>
   
