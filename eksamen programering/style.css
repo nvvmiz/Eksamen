@@ -394,7 +394,6 @@ Efter mange forsøg med alt muligt blev det her løsningen */
   /* skaber ens columns ( her navngivet box- fodb.... osv for hvert element)
   der er ingen padding fordi det gav rod i tekst og billeder i boxene.*/
   .box.fodbold,.box-badminton,.box-volleyball,.box-motion,.box-løb {
-    flex: fixed;
     margin-right: 30px;
   }
   
@@ -484,4 +483,7 @@ I stedet skal ikonet fremvises, således der fremstår en hamburger menu. https:
         display: block;
         text-align: left;
     }
+}
+.info {
+    padding-left: 40px;
 }
