@@ -49,11 +49,11 @@
   Derfor er vores form ikke fuldt interaktivt, da vi ikke har. https://www.w3schools.com/php/php_forms.asp-->
   <form action="/action_page.php" class="form-container">
     <label for="name"><b>Fulde Navn</b></label>
-    <input type="text" placeholder="Fulde Navn" name="name" required>
+    <input type="text" id="name" placeholder="Fulde Navn" name="name" required>
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Email adresse" name="email" required>
+    <input type="text" id="email" placeholder="Email adresse" name="email" required>
     <label for="Tlfnumber"><b>Tlf. nr.</b></label>
-    <input type="text" placeholder="Tlf. nr." name="tlf. nr" required>
+    <input type="text" id="Tlfnumber" placeholder="Tlf. nr." name="tlf. nr" required>
     <!--Fordi LOB tilbyder forskellige aktiviteter, som mulige foreningsmedlemmer kan tilmelde sig til, er der blevet tiføjet en dropdown menu,
     hvor brugeren kan vælge hvilken aktivitet han ønsker, at deltage i. https://www.w3schools.com/tags/att_value.asp-->
     <label for="valgmulighed">Aktiviteter</label>
@@ -81,12 +81,12 @@
     Vi en class w3-content w3-display-container, som er den container som omfanger det hele, og som er blevet stylet noget margin-top i vores CSS.
   Derudover har vi vores class mySlides, som ligeledes er blevet stylet i CSS. Der er adskillige slides, fordi vi har et billedegallery, 
   som skal vise flere billeder end ét. Her har vi i vores HTML også lavet noget style i form af at angive bredden og højden på vores valgte billeder.-->
-      <div class="w3-content w3-display-container" style="width: 97%; height:50%">
-        <img class="mySlides" src="images/beer.png" style="width:97%; height:50%">
-        <img class="mySlides" src="images/fodbold.png" style="width:97%; height:50%">
-        <img class="mySlides" src="images/pool.png" style="width:97%; height:50%">
-        <img class="mySlides" src="images/volley.png" style="width:97%; height:50%">
-        <img class="mySlides" src="images/bar.png" style="width:97%; height:50%">
+      <div class="w3-content w3-display-container"  style="width: 97%; height:50%">
+        <img class="mySlides" src="images/beer.png" alt="Mænd der skåler med øl" style="width:97%; height:50%">
+        <img class="mySlides" src="images/fodbold.png" alt="En fodboldstøvle ovenpå en fodbold" style="width:97%; height:50%">
+        <img class="mySlides" src="images/pool.png" alt="Et poolbord og kuglerne" style="width:97%; height:50%">
+        <img class="mySlides" src="images/volley.png" alt="Mænd der spiller volleyball udenfor" style="width:97%; height:50%">
+        <img class="mySlides" src="images/bar.png" alt="En Tuborg og et glas placeret på et bord" style="width:97%; height:50%">
       </div>
 
       <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
@@ -121,9 +121,9 @@ så det er muligt for brugeren at besøge disse andre foreninger mm. De er bleve
     <li><a href="privat.html">Privatlivspolitik</a></li><br> 
     <li><a href="vedtægter.html">Vedtægter</a></li><br>
     <li>Andre foreninger:</li>
-    <li><a href="https://www.lindoldgirls.dk/"target="_blank">lindoldgirls.dk | <a href="http://www.lindborger.dk/"target="_blank">lindborger.dk | <a href="https://alpihallerne.dk/"target="_blank"> alpihallerne.dk | <a href="https://desmaaklinger.dk/"target="_blank">desmaaklinger.dk</a></li>
-    <p>Denne side er udelukkende til undervisningsformål</p>
+    <li><a href="https://www.lindoldgirls.dk/" target="_blank">lindoldgirls.dk</a> | <a href="http://www.lindborger.dk/" target="_blank">lindborger.dk</a> | <a href="https://alpihallerne.dk/" target="_blank"> alpihallerne.dk</a> | <a href="https://desmaaklinger.dk/" target="_blank">desmaaklinger.dk</a></li>
 </ul>
+<p>Denne side er udelukkende til undervisningsformål</p>
 </footer>
 
 <!--NAVIGATIONSBAR: Her er der blevet gjort brug javascript til vores navigationbar hamburgermenu, således at den fungerer med at udvide sig og lukke sig, når brugeren interager med hamburgeren.
