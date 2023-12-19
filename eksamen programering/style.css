@@ -398,7 +398,7 @@ Efter mange forsøg med alt muligt blev det her løsningen */
     margin-right: 30px;
   }
   
-  /* på skærme der er 992px wide eller mindre, går fra 3 collums til  */
+  /* på skærme der er 992px brede eller mindre, går fra 3 kolonnerne til én kolonne */
   @media screen and (max-width: 992px) {
    .box-fodbold, .box-badminton, .box-volleyball, .box-motion, .box-løb {
     width: 100%;
@@ -406,7 +406,7 @@ Efter mange forsøg med alt muligt blev det her løsningen */
     }
   }
   
-  /* på skærme der er 600px wide or less, få columns stakke sig over hinanden og ikke ved siden af hinanden */
+  /* på skærme der er 600px brede eller mindre, bliver kolonner sat "ovenpå" hinanden, så brugeren skal scrolle for at se alle fem kolonner */
   @media screen and (max-width: 600px) {
     .row {
       flex-direction: column;
@@ -421,7 +421,8 @@ Efter mange forsøg med alt muligt blev det her løsningen */
     }
 }
 
-/*Dette er footeren, som indeholder noget styling og størrelse osv.*/
+/*Dette er footeren, som har samme baggrundsfarve, som navbaren. Color til at angive skriftfarven.
+Text-align er blevet brugt, således at indholdet er blevet placeret fra venstre side.*/
 footer {
     background-color: #2b4257;
     color: #ffffff;
@@ -434,24 +435,27 @@ footer {
 
 }
 
-/*Der er også blevet lavet en footer ul, således der ikke fremvises nogle elementer i punktformer, hvis indholdet opsættes i en liststyle*/
+/*Der er også blevet lavet en footer ul, således der ikke fremvises nogle elementer i punktformer, da indholdet er blevet opsat i en liststyle*/
 footer ul {
     list-style-type: none;
 }
 
-/*Vi havde problemer med at vores footer og pop-up tilmeldningsknap gav et gap i vores footer, når skærmsstørrelsen var mindre end 700px. Vi fik hjælp af ChatGPT til at finde problemet: https://chat.openai.com/share/5287e549-4caa-4901-ab90-858af1efbe7f*/
+/*Vi havde problemer med at vores footer og pop-up tilmeldningsknap gav et "hul" i vores footer, 
+når skærmsstørrelsen var mindre end 700px. Vi fik hjælp af ChatGPT til at finde problemet: https://chat.openai.com/share/5287e549-4caa-4901-ab90-858af1efbe7f
+ChatGPT fortalte os bl.a. at vi havde skrevet vores tag forkert og vi havde nogle andre formateringsproblemer med hvordan vi havde formuleret vores kode.*/
 @media screen and (max-width: 700px) {
     footer {
         margin-top: 20%;
     }
 }
 
-/* When the screen is less than 700 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* Når skærmstørrelsen er mindre end 700 pixels bred, skal alle links gemmes i navbaren (fællesskab, sport og kontakt) 
+I stedet skal ikonet fremvises, således der fremstår en hamburger menu. https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 @media screen and (max-width: 700px) {
     .navigation a:not(:first-child) {
         display: none;
     }
-
+/*Ikonet og fa.fa-bars er hamburger menuen*/
     .navigation a.icon,
     .fa.fa-bars {
         float: right;
