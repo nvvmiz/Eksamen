@@ -386,7 +386,7 @@ Efter mange forsøg med alt muligt blev det her løsningen */
 }
 
 /* Row indsættes for at få boxene til at tilpasse sig skærmstørrelserne.
- og boxene ligger sig under hinanden ved mobil størrelsen*/
+ og boxene ligger sig under hinanden ved mobil størrelsen. https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
  .row {
     display: flex;
     flex-wrap: wrap;
@@ -394,12 +394,12 @@ Efter mange forsøg med alt muligt blev det her løsningen */
   }
   
   /* skaber ens columns ( her navngivet box- fodb.... osv for hvert element)
-  der er ingen padding fordi det gav rod i tekst og billeder i boxene.*/
+  der er ingen padding fordi det gav rod i tekst og billeder i boxene. https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
   .box.fodbold,.box-badminton,.box-volleyball,.box-motion,.box-løb {
     margin-right: 30px;
   }
   
-  /* på skærme der er 992px brede eller mindre, går fra 3 kolonnerne til én kolonne */
+  /* på skærme der er 992px brede eller mindre, går fra 3 kolonnerne til én kolonne. https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
   @media screen and (max-width: 992px) {
    .box-fodbold, .box-badminton, .box-volleyball, .box-motion, .box-løb {
     width: 100%;
@@ -407,7 +407,7 @@ Efter mange forsøg med alt muligt blev det her løsningen */
     }
   }
   
-  /* på skærme der er 600px brede eller mindre, bliver kolonner sat "ovenpå" hinanden, så brugeren skal scrolle for at se alle fem kolonner */
+  /* på skærme der er 600px brede eller mindre, bliver kolonner sat "ovenpå" hinanden, så brugeren skal scrolle for at se alle fem kolonner. https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
   @media screen and (max-width: 600px) {
     .row {
       flex-direction: column;
