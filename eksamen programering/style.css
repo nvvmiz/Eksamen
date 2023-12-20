@@ -251,10 +251,12 @@ div.gallery img {
     border: none;
 }
 
-/*.desc:hover er en "animeret" indikation ved hjælp af CSS på vores tekstboks. Vi har en border på 1px, som er farvet i en mørkebrun farve, således det ligner at boksen har en animation, når brugeren kører musen henover feltet.  https://www.w3schools.com/howto/howto_css_image_gallery.asp */
+/*.desc:hover er en "animeret" indikation ved hjælp af CSS på vores tekstboks. Vi har en border på 1px, som er farvet i en mørkebrun farve, således det ligner at boksen har en animation, 
+når brugeren kører musen henover feltet. https://www.w3schools.com/howto/howto_css_image_gallery.asp Derudover fandt vi frem via vores tænke-højt test, 
+at der manglede en hånd, som indikerede at man kan trykke på knapperne. Derfor tilføjede vi cursor pointer til stylen. https://stackoverflow.com/questions/4678361/how-to-show-the-little-hand-in-a-link-that-doesnt-have-the-href-attribute#4678380*/
 .desc:hover {
-    border: 1px solid #777;
-
+   border: 1px solid #777;
+   cursor:pointer;
 }
 
 /*.soctitel er styling på bestemte overskrifter på vores side. Vi har givet den noget margin-bottom og margin-top, således der er noget space
@@ -486,4 +488,5 @@ I stedet skal ikonet fremvises, således der fremstår en hamburger menu. https:
 }
 .info {
     padding-left: 40px;
+    color: white;
 }
